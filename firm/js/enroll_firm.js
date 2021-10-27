@@ -49,35 +49,35 @@ function initializeLiffOrDie(myLiffId) {
   }
 }
 
-// function initializeLiff(myLiffId) {
-//   liff
-//     .init({
-//       liffId: myLiffId
-//     })
-//     .then(() => {
-//       initializeApp();
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// }
+function initializeLiff(myLiffId) {
+   liff
+   .init({
+      liffId: myLiffId
+   })
+   .then(() => {
+      initializeApp();
+   })
+   .catch((err) => {
+     console.log(err);
+   });
+}
 
-// var lineUserId = '';
-// function initializeApp() {
-//   if (liff.isLoggedIn()) {
-//     liff.getProfile().then(function (profile) {
-//       lineUserId = profile.userId;
-//       show_alert('LINE已登入成功');
-//     }).catch(function (error) {
-//       show_alert('抓取LINE資訊失敗<br>' + error);
-//     });
+var lineUserId = '';
+function initializeApp() {
+  if (liff.isLoggedIn()) {
+    liff.getProfile().then(function (profile) {
+      lineUserId = profile.userId;
+      show_alert('LINE已登入成功');
+    }).catch(function (error) {
+      show_alert('抓取LINE資訊失敗<br>' + error);
+    });
 
-//   }
-//   else {
-//     show_alert('請先用LINE登入');
-//     liff.login();
-//   }
-// }
+  }
+  else {
+    show_alert('請先用LINE登入');
+    liff.login();
+  }
+}
 
 document.getElementById("inputCode").addEventListener("change", defined);
 
