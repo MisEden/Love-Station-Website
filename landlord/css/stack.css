@@ -1,0 +1,35 @@
+body{
+    padding-top: 60px;
+}
+.wrapper{
+	background-color: #ddd;
+}
+.container{
+    padding-top: 8px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.3);
+	border-radius: 4px;
+    background-color: #ffffff;
+    padding-bottom: 20px;
+}
+.row{
+    padding-top: 10px;
+}
+.content1{
+    padding-top: 10px;
+
+}
+/* .intro{
+    background-color: wheat;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+} */
+
+.carousel-item img{
+    height: 320px;
+}
+
+
+th{
+    width: 100px;
+}

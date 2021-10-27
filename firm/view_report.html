@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查詢服務記錄</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/nav2.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="view_applyList.html" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        查詢服務記錄
+    </a>
+</nav>
+
+<body>
+    <div class="wrapper">
+        <section class="main">
+            <div class="card apply">
+                <nav class="nav nav-pills">
+                    <li class="nav-item" id=form1nav>
+                        <a class="nav-link " href="view_applyList.html">進行服務回報</a>
+                    </li>
+                    <li class="nav-item" id=form2nav>
+                        <a class="nav-link active" href="view_report.html">查詢服務記錄</a>
+                    </li>
+                </nav>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <form id="form1">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    請輸入欲查詢之入住日期區間:
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="input_date_in" class="col-form-label addRedStar">欲查詢月份</label>
+                                    <input type="month" class="form-control" id="date">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="col-form-label addRedStar">選擇棧點</label>
+                                    <select class="form-control" id="SelectHouse">
+                                        <option value="0">請選擇</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="col-form-label">房號</label>
+                                    <select class="form-control" id="SelectRoom">
+                                        <!-- <option value="all">(全部)</option> -->
+                                    </select>
+                                </div>
+                                <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content bottom">
+                                            <div class="modal-body" id="body">
+
+                                            </div>
+                                            <div class="modal-footer bottom">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">關閉</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12 bottom text-align:center">
+                                    <input type="button" class="btn btn-outline-success" style="width:100%;" value="查詢"
+                                        onclick="query()" />
+                                </div>
+
+                            </div>
+                        </form>
+                        <div id="show_apply" style="margin-top:20px; display: none;">
+                            <table class="table" id="table1">
+                                <thead>
+                                    <tr>
+                                        <th>入住棧點</th>
+                                        <th>房號</th>
+                                        <th>服務日期</th>
+                                        <th>施作內容</th>
+                                        <th>清潔前照片</th>
+                                        <th>清潔後照片</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content bottom">
+                                    <div class="modal-body" id="body">
+
+                                    </div>
+                                    <div class="modal-footer bottom">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/datepicker-zh-TW.js"></script>
+<script asnyc src="js/view_report.js"></script>
+<script src="js/url.js"></script>
+
+</html>

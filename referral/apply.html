@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>入住申請單</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="rent.html" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt=""> 填寫入住申請單
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="query_number.html">查詢轉介編號</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="rent.html">棧點入住申請</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="view_applyList.html">檢視申請單</a>
+            </li>
+            <!-- <li class="nav-item">
+                    <a class="nav-link" href="view_change.html">檢視變更需求單</a>
+                </li> -->
+            <!-- <li>
+                    <a class="nav-link" href="javascript:clean()">登出</a>
+                </li> -->
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <form id="form1" data-toggle="validator" class="form">
+                <div class="form-row">
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">轉介單位資料</div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="ReferralDate">轉介日期</label>
+                        <input type="text" class="form-control" id="ReferralDate" disabled>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="ReferralHospital">轉介醫院</label>
+                        <input type="text" class="form-control" id="ReferralHospital" disabled>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ReferralName">轉介人員姓名</label>
+                        <input type="text" class="form-control" id="ReferralName" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ReferralTitle">轉介人員職稱</label>
+                        <input type="text" class="form-control" id="ReferralTitle" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ReferralPhone">轉介人員電話</label>
+                        <input type="text" class="form-control" id="ReferralPhone" disabled>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">申請入住者基本資料</div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputId">身分證字號</label>
+                        <input class="form-control" type="text" id="inputID" placeholder="英文字母請大寫" pattern="^[A-Z]\d{9}$" data-error="格式錯誤" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <p></p>
+                        <p><input type="button" class="btn btn-primary" value="帶入申請人資料" onclick="put()">
+                            <input type="button" class="btn btn-primary" value="編輯申請人資料" onclick="edit()"></p>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputName">申請人姓名</label>
+                        <input type="text" class="form-control" id="inputName" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputBirth">出生年月日</label>
+                        <input type="text" class="form-control" id="inputBirth" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label">性別</label>
+                        <input type="text" class="form-control" id="inputSexual" disabled>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputAddress">通訊地址</label>
+                        <input type="text" class="form-control" id="inputAddress" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputPhone">連絡電話</label>
+                        <input type="text" class="form-control" id="inputPhone" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputBlo">血型</label>
+                        <div>
+                            <select class="form-control" id="inputBlo" required disabled>
+                                <option value="A">A型</option>
+                                <option value="B">B型</option>
+                                <option value="O">O型</option>
+                                <option value="AB">AB型</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label">本次是否入住</label>
+                        <div>
+                            <select class="form-control" id="inputInOut" required>
+                                    <option value="true">有入住</option>
+                                    <option value="false">僅照顧者入住</option>
+                                </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">病歷資料</div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputLan[]">慣用語言</label>
+                        <div id="editLan">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputLan_chinese" name="inputLan[]" value="國語">
+                                <label class="form-check-label">國語</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputLan_taiwanese" name="inputLan[]" value="台語">
+                                <label class="form-check-label">台語</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputLan_hakka" name="inputLan[]" value="客語">
+                                <label class="form-check-label">客語</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputLan_other" name="inputLan[]" value="ot">
+                                <input type="text" class="form-control form-control-sm" id="inputLan_other_text" id="inputLanOt" placeholder="其他">
+                            </div>
+                        </div>
+                        <input class="form-control" type="text" id="inputLan2" hidden>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputSick">特殊病史</label>
+                        <input type="text" class="form-control" id="inputSick" placeholder="若沒有請填無" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputSenDrug">過敏藥物</label>
+                        <input type="text" class="form-control" id="inputSenDrug" placeholder="若沒有請填無" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputDigName">診斷名稱</label>
+                        <input type="text" class="form-control" id="inputDigName" placeholder="此欄位為必填" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputDigDet">病況概述</label>
+                        <input type="text" class="form-control" id="inputDigDet" placeholder="此欄位為必填" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputDrug">目前用藥</label>
+                        <input type="text" class="form-control" id="inputDrug" data-error="此欄位為必填" placeholder="此欄位為必填，請輸入藥名、劑量、頻率" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputType">身分別</label>
+                        <div id="editType">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputType_normal" name="inputType[]" value="一般戶">
+                                <label class="form-check-label">一般戶</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputType_disability" name="inputType[]" value="身心障礙者(輕中重)">
+                                <label class="form-check-label">身心障礙者(輕中重)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputType_income_lower" name="inputType[]" value="中低收入">
+                                <label class="form-check-label">中低收入</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputType_income_lowest" name="inputType[]" value="低收入">
+                                <label class="form-check-label">低收入</label>
+                            </div>
+                        </div>
+                        <input class="form-control" type="text" id="inputType2" hidden>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputAbility">自理能力</label>
+                        <div>
+                            <select class="form-control" id="inputAbility" required>
+                                    <option value="完全可自理">完全可自理</option>
+                                    <option value="部分可自理，須他人協助">部分可自理，須他人協助</option>
+                                    <option value="無法自理">無法自理</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputTool">輔具使用</label>
+                        <div id="editTool">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputTool_none" name="inputTool[]" value="無" checked>
+                                <label class="form-check-label">無</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputTool_crutch" name="inputTool[]" value="柺杖">
+                                <label class="form-check-label">柺杖</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputTool_wheelchair" name="inputTool[]" value="輪椅">
+                                <label class="form-check-label">輪椅</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputTool_walker" name="inputTool[]" value="助行器">
+                                <label class="form-check-label">助行器</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputTool_prosthetic" name="inputTool[]" value="義肢">
+                                <label class="form-check-label">義肢</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputTool_ecar" name="inputTool[]" value="電動車">
+                                <label class="form-check-label">電動車</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inputTool_other" name="inputTool[]" value="ot">
+                                <input type="text" class="form-control form-control-sm" id="inputToolOt" placeholder="其他">
+                            </div>
+                        </div>
+                        <input class="form-control" type="text" id="inputTool2" hidden>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">照顧者資料</div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="CareName">照顧者姓名</label>
+                        <input type="text" class="form-control" id="CareName" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="CareRelate">與申請人關係</label>
+                        <input type="text" class="form-control" id="CareRelate" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="CarePhone">照顧者連絡電話</label>
+                        <input type="tel" class="form-control" id="CarePhone" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">傳染性疾病</div>
+                    <div>
+                        <p>
+                            為確保後續其他使用者能有安全的入住環境，請協助我們確認入住人員有無傳染病防治法第三條所列相關
+                            <a id="disease">法定傳染性疾病</a>
+                        </p>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputConSick">申請人是否有傳染疾病</label>
+                        <div class="radio">
+                            <label>
+                                    <input type="radio" name="inputConSick" value="無" checked>無
+                                </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                    <input type="radio" name="inputConSick" value="Y">有
+                                </label>
+                            <label>
+                                    <input type="text" class="form-control" id="inputConSickName" placeholder="第 X 類中的 XXX">
+                                </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="CareConSick">照顧者是否有傳染疾病</label>
+                        <div class="radio">
+                            <label>
+                                    <input type="radio" name="CareConSick" value="無" checked>無
+                                </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                    <input type="radio" name="CareConSick" value="Y">有
+                                </label>
+                            <label>
+                                    <input type="text" class="form-control" id="CareConSickName" placeholder="第 X 類中的 XXX">
+                                </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">緊急聯絡人資料</div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactName1">第一聯絡人姓名</label>
+                        <input type="text" class="form-control" id="ContactName1" placeholder="此欄位為必填" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactRelate1">與申請人關係</label>
+                        <input type="text" class="form-control" id="ContactRelate1" placeholder="此欄位為必填" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactPhone1">連絡電話</label>
+                        <input type="tel" class="form-control" id="ContactPhone1" placeholder="此欄位為必填" data-error="此欄位為必填" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactName2">第二聯絡人姓名</label>
+                        <input type="text" class="form-control" id="ContactName2">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactRelate2">與申請人關係</label>
+                        <input type="text" class="form-control" id="ContactRelate2">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactPhone2">連絡電話</label>
+                        <input type="tel" class="form-control" id="ContactPhone2">
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-warning" style="text-align: center; color: red;">申請內容</div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputStack">申請棧點</label>
+                        <input type="text" class="form-control" id="inputStack1" disabled>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputStack">棧點房號</label>
+                        <input type="text" class="form-control" id="inputStack2" disabled>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputDayIn">入住日期</label>
+                        <input type="date" class="form-control" id="inputDayIn" disabled>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputDayOut">退房日期</label>
+                        <input type="date" class="form-control" id="inputDayOut" disabled>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputReason">申請原因</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="inputReason[]" value="需兩天或兩天以上檢查/治療者">
+                            <label class="form-check-label" for="inputReason1">需兩天或兩天以上檢查/治療者</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="inputReason[]" value="須隨時等待入院通知者">
+                            <label class="form-check-label" for="inputReason2">須隨時等待入院通知者</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="inputReason[]" value="須頻繁往返治療者">
+                            <label class="form-check-label" for="inputReason3">須頻繁往返治療者</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="inputReason[]" value="因未有安歇處之住院病友照顧者">
+                            <label class="form-check-label" for="inputReason4">因未有安歇處之住院病友照顧者</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="inputReason[]" value="ot">
+                            <input type="text" class="form-control form-control-sm" id="inputReasonOt" placeholder="其他">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content bottom">
+                                <div class="modal-body" id="body">
+
+                                </div>
+                                <div class="modal-footer bottom">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 bottom">
+                        <input type="button" class="btn btn-info" value="送出申請" onclick="return apply()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script type="text/javascript" src="js/jquery.twzipcode.min.js"></script>
+<script type="text/javascript" src="js/jquery.twzipcode.js"></script>
+<!-- <script>
+        $("#twzipcode").twzipcode({
+            countySel: "臺北市",
+            districtSel: "大安區",
+            "zipcodeIntoDistrict": true,
+            "css": ["city form-control col-md-3", "town form-control col-md-6"]
+        });
+    </script> -->
+<script asnyc src="js/apply.js"></script>
+<script src="js/url.js"></script>
+
+</html>

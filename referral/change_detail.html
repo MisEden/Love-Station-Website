@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檢視變更需求單</title>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/touch-icon-iphone-retina.png" />
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="change_detail.html" .html" style="color: white; width: 220px;">
+        <img src="https://house.eden.org.tw/wp-content/uploads/2015/04/伊甸基金會LOGO.png" width="40" height="30"
+            class="d-inline-block align-top" alt="">
+        檢視變更需求單
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    </div>
+</nav>
+
+<body>
+    <div class="wrapper">
+        <section class="main">
+            <div id="breadcrumbRow" class="row">
+
+            </div>
+
+            <div class="card apply">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <form id="form1">
+                            <div class="form-row" id="content">
+                                <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content bottom">
+                                            <div class="modal-body" id="body">
+
+                                            </div>
+                                            <div class="modal-footer bottom">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">關閉</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="inputNumber">申請單編號</label>
+                                    <input class="form-control" type="text" id="inputNumber" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="roomStateChangeDate">提出變更的日期</label>
+                                    <input class="form-control" type="text" id="roomStateChangeDate" disabled>
+                                </div>
+                                <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">轉介單位資料
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="referralDate">轉介日期</label>
+                                    <input class="form-control" type="text" id="referralDate" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="referralName">轉介醫院</label>
+                                    <input class="form-control" type="text" id="referralName" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="referralEmployeeName">轉介人員姓名</label>
+                                    <input class="form-control" type="text" id="referralEmployeeName" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="referralEmployeeTitle">轉介人員職稱</label>
+                                    <input class="form-control" type="text" id="referralEmployeeTitle" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="referralEmployeeCellphone">轉介人員電話</label>
+                                    <input class="form-control" type="text" id="referralEmployeeCellphone" disabled>
+                                </div>
+
+                                <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">申請人資料
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="inputChName">申請人姓名</label>
+                                    <input class="form-control" type="text" id="inputChName" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="inputSexual">性別</label>
+                                    <input class="form-control" type="text" id="inputSexual" disabled>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="inputId">身分證字號</label>
+                                    <input class="form-control" type="text" id="inputId" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="inputBirth">生日</label>
+                                    <input class="form-control" type="text" id="inputBirth" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="bloodType">血型</label>
+                                    <input class="form-control" type="text" id="bloodType" disabled>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="col-form-label" for="userAddress">通訊地址</label>
+                                    <input class="form-control" type="text" id="userAddress" disabled>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="inputPhone">行動電話</label>
+                                    <input class="form-control" type="text" id="inputPhone" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="language">慣用語言</label>
+                                    <input class="form-control" type="text" id="language" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="specialMedicalHistory">特殊病史</label>
+                                    <input class="form-control" type="text" id="specialMedicalHistory" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="drugAllergy">過敏藥物</label>
+                                    <input class="form-control" type="text" id="drugAllergy" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="diagnosedWith">診斷名稱</label>
+                                    <input class="form-control" type="text" id="diagnosedWith" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="overviewPatientCondition">病況概述</label>
+                                    <input class="form-control" type="text" id="overviewPatientCondition" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="userIdentity">身分別</label>
+                                    <input class="form-control" type="text" id="userIdentity" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="selfCareAbility">自理能力</label>
+                                    <input class="form-control" type="text" id="selfCareAbility" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="attachment">輔具使用</label>
+                                    <input class="form-control" type="text" id="attachment" disabled>
+                                </div>
+                                <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">照顧者資料
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="caregiverName">照顧者姓名</label>
+                                    <input class="form-control" type="text" id="caregiverName" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="caregiverRelationship">關係</label>
+                                    <input class="form-control" type="text" id="caregiverRelationship" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="caregiverPhone">聯絡電話</label>
+                                    <input class="form-control" type="text" id="caregiverPhone" disabled>
+                                </div>
+
+                                <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">傳染性疾病
+                                </div>
+                                <!-- <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="attachment">法定傳染病彙整表</label>
+                                    <input class="form-control" type="text" id="attachment" disabled>
+                                </div> -->
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="applicantInfectiousDisease">申請人 </label>
+                                    <input class="form-control" type="text" id="applicantInfectiousDisease" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="caregiverInfectiousDisease">照顧者</label>
+                                    <input class="form-control" type="text" id="caregiverInfectiousDisease" disabled>
+                                </div>
+
+                                <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">緊急聯絡人
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="oneEmergencyContactName">第一緊急聯絡人姓名</label>
+                                    <input class="form-control" type="text" id="oneEmergencyContactName" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="oneEmergencyContactRelationship">關係</label>
+                                    <input class="form-control" type="text" id="oneEmergencyContactRelationship"
+                                        disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="oneEmergencyContactPhone">聯絡電話</label>
+                                    <input class="form-control" type="text" id="oneEmergencyContactPhone" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="twoEmergencyContactName">第二緊急聯絡人姓名</label>
+                                    <input class="form-control" type="text" id="twoEmergencyContactName" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="twoEmergencyContactRelationship">關係</label>
+                                    <input class="form-control" type="text" id="twoEmergencyContactRelationship"
+                                        disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="twoEmergencyContactPhone">聯絡電話</label>
+                                    <input class="form-control" type="text" id="twoEmergencyContactPhone" disabled>
+                                </div>
+                                <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">申請變更內容
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="houseName">入住棧點</label>
+                                    <input class="form-control" type="text" id="houseName" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="startDate">原入住日期</label>
+                                    <input class="form-control" type="text" id="startDate" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="endDate">原退房日期</label>
+                                    <input class="form-control" type="text" id="endDate" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label addRedStar">變更項目</label>
+                                    <select class="form-control" id="changedItem">
+                                        <option value="0">請選擇</option>
+                                        <option value="延後入住">延後入住</option>
+                                        <option value="延後退房">延後退房</option>
+                                        <option value="提前入住">提前入住</option>
+                                        <option value="提前退房">提前退房</option>
+                                        <option value="取消入住">取消入住</option>
+                                        <option value="變更入住及退房時間">變更入住及退房時間</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="reason">原因</label>
+                                    <input class="form-control" type="text" id="reason" maxlength="10">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="newStartDate"
+                                        id='newStartDate_title'>使用者欲變更的入住日期</label>
+                                    <input class="form-control" type="date" id="newStartDate">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="newEndDate"
+                                        id="newEndDate_title">使用者欲變更的退房日期</label>
+                                    <input class="form-control" type="date" id="newEndDate">
+                                </div>
+                                <!-- <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="reason">說明原因</label>
+                                    <input class="form-control" type="text" id="reason" disabled>
+                                </div> -->
+
+                                <div class="form-group col-md-12 bottom text-align:center">
+                                    <input type="button" class="btn btn-outline-success" style="width:100%;" value="送出"
+                                        onclick="submit_report()" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="js/jquery.media.js"></script>
+<script asnyc src="js/change_detail.js"></script>
+<script src="js/url.js"></script>
+
+</html>

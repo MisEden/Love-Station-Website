@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>忘記密碼</title>
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            html, body { height: 100%; }
+            .container-fluid{height:100%; display:table; width: 100%; padding: 0; }
+            .row-fluid {height: 100%; display:table-cell; vertical-align: middle;}
+            .centering {float:none; margin:0 auto;}
+        </style>
+    </head>
+
+    <body>
+        <div class="container container-fluid">
+            <div class="row justify-content-center row-fluid">
+                <div class="centering">
+                    <div class="shadow-lg p-3 mb-5 bg-white rounded" style="max-width: 400px; margin: auto;">
+                        <div class="up">忘記密碼</div>
+                        <form action="" class="form" id="form1">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label class="col-form-label" for="inputEmail">電子信箱</label>
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="請輸入註冊時填寫之電子信箱" required><br>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content bottom">
+                                        <div class="modal-body" id="body">
+            
+                                        </div>
+                                        <div class="modal-footer bottom">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group bottom">
+                                <input type="button" class="btn btn-info" value="送出" onclick="forget()">
+                                <span style="color:#999; font-weight: normal;">點選按鈕後請稍等系統運作</sapn>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script asnyc src="js/forget.js"></script>
+    <script src="js/url.js"></script>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指派志工與廠商</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>指派志工與廠商</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div id="card-39214">
+                        <div class="card">
+                            <div class="card-header">
+                                 <a class="card-link" data-toggle="collapse" data-parent="#card-39214" href="#card-element-470097">▼ 入住申請資訊</a>
+                            </div>
+                            <div id="card-element-470097" class="collapse show">
+                                <div class="card-body">
+                                    <form id="form1">
+                                        <div class="form-row">
+                
+                                            <div class="col-md-12 divTitle">棧點資訊</div>
+                
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label" for="inputHouseName">棧點名稱</label>
+                                                <input class="form-control" type="text" id="inputHouseName" disabled>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label" for="inputRoomNumber">房號</label>
+                                                <input class="form-control" type="text" id="inputRoomNumber" disabled>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label" for="inputStartDate">入住日期</label>
+                                                <input class="form-control" type="text" id="inputStartDate" disabled>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label" for="inputEndDate">退房日期</label>
+                                                <input class="form-control" type="text" id="inputEndDate" disabled>
+                                            </div>
+
+
+                                            <div class="col-md-12 divTitle">申請單資訊</div>
+                                            <div class="form-group col-md-4">
+                                                <label class="col-form-label" for="inputChName">中文姓名</label>
+                                                <input class="form-control" type="text" id="inputChName" disabled>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="col-form-label" for="inputCellphone">手機</label>
+                                                <input class="form-control" type="email" id="inputCellphone" disabled>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="col-form-label" for="inputReferralName">轉介人員姓名</label>
+                                                <input class="form-control" type="text" id="inputReferralName" disabled>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="editDiv" class="card">
+                            <div class="card-header">
+                                 <a class="collapsed card-link" data-toggle="collapse" data-parent="#card-39214" href="#card-element-564107">▼ 志工/廠商指派</a>
+                            </div>
+                            <div id="card-element-564107" class="collapse show">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="form-group col-12">
+                                            <label class=" col-form-label addRedStar">請選擇志工:</label>
+                                            <select class="form-control" id="SelectVolunteers">
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label class=" col-form-label addRedStar">請選擇廠商:</label>
+                                            <select class="form-control" id="SelectFirms">
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12 mt-5">
+                                            <input type="button" class="btn btn-success btn-lg btn-block" value="送出指派" onclick="assign()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/assign_service.js"></script>
+  </body>
+
+</html>

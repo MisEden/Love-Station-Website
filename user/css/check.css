@@ -1,0 +1,28 @@
+ol {
+    list-style: none; 
+    counter-reset: li
+}
+
+ol li::before {
+    content: counter(li); 
+    color:  white;
+    background-color: rgb(255, 110, 27);
+    display: inline-block; 
+    width: 1.5em;
+    text-align: center;
+    margin-left: -1em;
+    margin-top: 15px;
+}
+
+li {
+    counter-increment: li
+}
+
+.col-form-label{
+    color: rgb(255, 110, 27);
+    font-weight: bolder;
+}
+
+.col-form-label.title{
+    font-size: larger;
+}

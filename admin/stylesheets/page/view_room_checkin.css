@@ -1,0 +1,32 @@
+.title{
+    font-size: 19.2px;
+    display: inline-block;
+    width: 100%;
+}
+
+input[type="radio"]{
+    /* margin-left: 1.25rem; */
+    margin-right: 0.25rem;
+}
+
+.col-content{
+    padding-left: 20px;
+}
+
+.form-check-input{
+    margin-right: 0.25rem;
+    margin-top: 0px;
+    position:inherit;
+}
+
+.form-check-label{
+    margin-right: 1.25rem;
+}
+
+.fa-star{
+    font-size: 150%;
+}
+
+.checked {
+    color: orange;
+  }

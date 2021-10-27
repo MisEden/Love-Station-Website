@@ -1,0 +1,50 @@
+.show_table{
+	overflow-x: auto;
+}
+
+.table{
+    table-layout:auto;
+}
+
+.table td, .table th {
+    padding: .34rem !important;
+    vertical-align: middle !important;
+}
+
+td{
+    height: 65px;
+}
+
+btn-success:hover, .btn-success:active, .btn-success:visited {
+    width: 100% !important;
+    min-width: 90% !important;
+}
+
+select, option{
+    text-align: center;
+}
+
+.bg-orange{
+    background-color: #e67e22;
+}
+
+.bg-gray{
+    background-color: #5E5B52 !important;
+}
+
+.bg-gray a{
+    color: #FFF !important;
+}
+
+.btn{
+    margin: auto 5px;
+}
+
+.insertDiv-header{
+    margin: 15px 0px 0px 5px!important; 
+
+    font-size: 130%;
+    font-weight: bold;
+    
+    border-bottom: 1px solid #ececec;
+}

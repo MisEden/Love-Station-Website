@@ -1,0 +1,59 @@
+.up{
+    width:350px;
+    height: 10vh;
+    margin:0 auto;
+    display: block;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgb(255, 123, 0);
+    color:white;
+    font-size: larger;
+    text-align: center;
+    line-height: 10vh;
+}
+.form{
+    width:350px;
+    margin:0 auto;
+    border-radius: 0px 0px 10px 10px;
+    border: 2px solid rgb(255, 123, 0);
+    padding:30px;
+    background-color: white;
+    font-weight: bolder;
+}
+label{
+    color: rgb(255, 123, 0);
+}
+.with-errors{
+	color: red;
+	font-size: 12px;
+}
+input[type=text], input[type=password] {
+    border-radius: 15px;
+}
+a{
+    padding: 10px;
+} 
+input[type=button]{
+    margin:0 auto;
+    display: block;
+}  
+.bottom{
+    margin-top: 50px;
+    text-align:center!important
+}
+.btn-info{
+    width: 100px;
+    border-radius: 18px !important;
+    background-color: rgb(255, 123, 0, 0.8) !important;
+    border-color: rgb(255, 123, 0, 0.8) !important;
+
+}
+.btn-info:hover, .btn-info:active, .btn-info:visited {
+    width: 100px;
+    border-radius: 18px !important;
+    background-color: rgba(255, 123, 0) !important;
+    border-color: rgb(255, 123, 0) !important;
+}
+.btn-secondary{
+    width: 100px;
+    border-radius: 18px !important;
+}

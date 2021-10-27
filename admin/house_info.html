@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>編輯棧點資訊</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>編輯棧點資訊</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <form id="form1">
+                        <div class="form-row">
+                            
+                            <div class="col-md-12 divTitle mt-5">一、棧點基本資料<small>（請記得按下「儲存」按鈕）</small></div>
+
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="houseName">棧點名稱</label>
+                                <input class="form-control" type="text"  id="houseName" placeholder="台北南海棧">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="col-form-label" for="houseCity">棧點地區</label>
+                                <select class="form-control" id="houseCity">
+                                    <option value="01.基隆市">基隆市</option>  
+                                    <option value="02.台北市">台北市</option>  
+                                    <option value="03.新北市">新北市</option>    
+                                    <option value="04.桃園市">桃園市</option>    
+                                    <option value="05.新竹市">新竹市</option>    
+                                    <option value="06.新竹縣">新竹縣</option>     
+                                    <option value="07.苗栗縣">苗栗縣</option>    
+                                    <option value="08.台中市">台中市</option>   
+                                    <option value="09.彰化縣">彰化縣</option>    
+                                    <option value="10.南投縣">南投縣</option>    
+                                    <option value="11.雲林縣">雲林縣</option>    
+                                    <option value="12.嘉義市">嘉義市</option>    
+                                    <option value="13.嘉義縣">嘉義縣</option>  
+                                    <option value="14.台南市">台南市</option>    
+                                    <option value="15.高雄市">高雄市</option>    
+                                    <option value="16.屏東縣">屏東縣</option>        
+                                    <option value="17.宜蘭縣">宜蘭縣</option>    
+                                    <option value="18.花蓮縣">花蓮縣</option>   
+                                    <option value="19.台東縣">台東縣</option>    
+                                    <option value="20.澎湖縣">澎湖縣</option>    
+                                    <option value="21.金門縣">金門縣</option>   
+                                    <option value="22.連江縣">連江縣</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label" for="houseIntroduction">棧點簡介</label>
+                                <textarea class="form-control col-md-12" id="houseIntroduction" rows="5"></textarea>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="col-form-label" for="houseSquareFootage">坪數</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="houseSquareFootage">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"> 坪 </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="col-form-label" for="houseRoomLayout">格局</label>
+                                <input class="form-control" type="text"  id="houseRoomLayout" placeholder="2房2廳1衛">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="col-form-label" for="houseTotalFloor">樓層</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="houseTotalFloor">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"> F </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="col-form-label" for="houseStyle">型態</label>
+                                <input class="form-control" type="text"  id="houseStyle" placeholder="電梯大廈">
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="houseRoomDescription">房間數描述</label>
+                                <input class="form-control" type="text"  id="houseRoomDescription" placeholder="3人房1間、2人房1間">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="col-form-label" for="btnRoomNumber">房間編號</label>
+                                <a id="btnRoomNumber" class="btn btn-outline-primary col-md-12" href="#" target="_blank">編輯</a>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="houseFeature">特色說明</label>
+                                <input class="form-control" type="text"  id="houseFeature" placeholder="無障礙衛浴,電動床,房內備有緊急救援通報系統">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="col-form-label" for="houseLandlord">房東</label>
+                                <select class="form-control" id="houseLandlord">
+                                </select>
+                            </div>
+
+                            <div class="col-md-12 divTitle mt-5">二、棧點照片</div>
+                            <div class="form-group col-md-12">
+                                <a id="btnHouseImages" class="btn btn-outline-primary col-md-12" href="#" target="_blank">編輯</a>
+                            </div>
+                            
+
+                            <div class="col-md-12 divTitle mt-5">三、家具設備</div>
+                            <div class="form-group col-md-6">
+                                <label class="col-form-label" for="housePublicFurniture">公共家具</label>
+                                <a id="housePublicFurniture" class="btn btn-outline-primary col-md-12" href="#" target="_blank">編輯</a>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="col-form-label" for="housePrivateFurniture">房間家具</label>
+                                <a id="housePrivateFurniture" class="btn btn-outline-primary col-md-12" href="#" target="_blank">編輯</a>
+                            </div>
+                            
+
+
+                            <div class="col-md-12 divTitle mt-5">四、地理交通<small>（請記得按下「儲存」按鈕）</small></div>
+                        
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label" for="houseAddress">地址</label>
+                                <input class="form-control" id="houseAddress" placeholder="台北市中正區南海路">
+                            </div>
+                            
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label" for="houseNearHospital">鄰近醫院</label>
+                                <textarea class="form-control col-md-12" id="houseNearHospital" rows="5" placeholder="臺大醫院、臺大兒童醫院、台北馬偕醫院、三總汀州院區、台北榮總、振興醫院"></textarea>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label" for="houseLifeFunction">生活機能</label>
+                                <textarea class="form-control col-md-12" id="houseLifeFunction" rows="5" placeholder="超商、超市、南機場夜市、台北植物園、國立歷史博物館等"></textarea>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label" for="houseTraffic">附近交通</label>
+                                <textarea class="form-control col-md-12" id="houseTraffic" rows="5" placeholder="中正紀念堂捷運站、三元街口公車站"></textarea>
+                            </div>
+
+                            <div class="col-md-12 divTitle mt-5">五、影圖上傳</div>
+                            <div class="row w-100">
+                                <div class="col-md-6 pb-5">
+                                    <h4><i class="fas fa-file-image"></i>平面圖</h4>
+
+                                    <a id="link_planimetricMap" href="" target="_blank"><img id="img_planimetricMap" class="w-100" src=""></a>
+
+                                    <div id="alert_planimetricMap" class="alert alert-warning alert-dismissable" style="display: none;">
+                                        <h4><b><u>無圖片</u></b></h4> 
+                                        <strong class="ml-3">無上傳圖片</strong> 或 <strong>無法取得圖片</strong>
+                                    </div>
+                                </div>
+                
+                                <div class="col-md-6">
+                                    <h4><i class="fas fa-file-image"></i>360度影像</h4>
+
+                                    <div id="link_fullDegreePanorama">
+                                        <div id="show_iframe" class="w-100">
+                                            <iframe width="100%" allowfullscreen style="border-style:none;" id="iframe_fullDegreePanorama"></iframe>
+                                        </div>
+                                    </div>
+
+                                    <div id="alert_fullDegreePanorama" class="alert alert-warning alert-dismissable" style="display: none;">
+                                        <h4><b><u>無圖片</u></b></h4> 
+                                        <strong class="ml-3">無上傳圖片</strong> 或 <strong>無法取得圖片</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <a id="btnPhotoModify" class="btn btn-outline-primary col-md-12" href="#" target="_blank">編輯</a>
+                            </div>
+
+                                   
+                            <div id="bottom" class="form-group col-md-12 text-center" style="margin: 50px auto 50px auto;">
+                                <input type="button" class="btn btn-success btn-lg btn-block" value="儲存" onclick="save()">
+                                <input type="button" class="btn btn-secondary btn-lg btn-block mt-4" value="返回" onclick="discard()">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/house_info.js"></script>
+  </body>
+
+</html>

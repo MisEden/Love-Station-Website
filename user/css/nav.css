@@ -1,0 +1,115 @@
+body{
+    font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+#logo{
+    width:60%;
+    padding-top: 20px;
+    display:block; 
+    margin:auto;
+}
+
+a{
+    font-weight: bold;
+    font-size: 18px;
+}
+button{
+    padding-right: 15px;
+}
+
+form{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 90%;
+}
+label{
+    text-align: left;
+}
+
+.wrapper{
+	background-color: #ddd;
+	min-height: 100vh;
+}
+.card{
+	padding: 16px;
+	background-color: #fefefe;
+	box-shadow: 0 3px 30px rgba(0,0,0,0.3);
+}
+
+.btn-info{
+    width: 100px;
+    border-radius: 18px !important;
+    background-color: rgb(255, 123, 0, 0.8) !important;
+    border-color: rgb(255, 123, 0, 0.8) !important;
+
+}
+.btn-info:hover, .btn-info:active, .btn-info:visited {
+    width: 100px;
+    border-radius: 18px !important;
+    background-color: rgba(255, 123, 0) !important;
+    border-color: rgb(255, 123, 0) !important;
+}
+
+.btn-primary{
+    width: 250px;
+    border-radius: 18px !important;
+    background-color: rgb(255, 123, 0, 0.8) !important;
+    border-color: rgb(255, 123, 0, 0.8) !important;
+    margin:5px;
+    
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    width: 250px;
+    border-radius: 18px !important;
+    background-color: rgb(255, 123, 0) !important;
+    border-color: rgb(255, 123, 0) !important;
+}
+
+.btn-dark{
+    width: 200px;
+    border-radius: 18px !important;
+    background-color: rgb(66, 187, 29, 0.8) !important;
+    border-color: rgb(66, 187, 29, 0.8) !important;
+    margin:5px;
+    
+}
+.btn-dark:hover, .btn-primary:active, .btn-primary:visited {
+    width: 200px;
+    border-radius: 18px !important;
+    background-color: rgba(66, 187, 29) !important;
+    border-color: rgb(66, 187, 29) !important;
+}
+
+.btn-danger{
+    width: 100px;
+    border-radius: 18px !important;
+}
+.btn-danger:hover, .btn-danger:active, .btn-danger:visited {
+    width: 100px;
+    border-radius: 18px !important;
+}
+
+.bottom{
+    margin-top: 10px;
+    display: block;
+    text-align:center!important
+}
+.with-errors{
+	color: red;
+	font-size: 12px;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 25px;
+  color:  rgba(255, 123, 0);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 25px;
+  color:  rgba(255, 123, 0);
+}

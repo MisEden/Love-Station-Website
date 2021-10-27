@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>檢視入住申請單</title>
+        <link rel="stylesheet" href="css/nav.css"> 
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+        <a class="navbar-brand" href="applyList.html" style="color: white;">
+            <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            檢視入住申請單
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" >
+                    <a class="nav-link" href="applyList.html">檢視入住申請紀錄</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">進行入住確認程序</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">進行退房確認程序</a>
+                </li> -->
+                <!-- <li>
+                    <a class="nav-link" href="javascript:clean()">登出</a>
+                </li> -->
+            </ul>
+        </div>
+      </nav>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <form id="form1" class="form" data-toggle="validator" >
+                    <div class="form-row">
+
+                        <div class="col-md-12 p-3 mb-3 bg-info text-white " style="text-align: left;">待審核入住/變更申請單</div>                          
+                          <table class="table table-hover table-bordered">
+                            <thead class="thead-light">
+                              <tr>
+                                <th scope="col">單號</th>
+                                <th scope="col">申請單類型</th>
+                                <th scope="col">申請日期</th>
+                                <th scope="col">轉介單位名稱</th>
+                                <th scope="col">轉介人員</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>1</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>Mark</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>2</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>Mark</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>3</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>Mark</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        <div class="col-md-12 p-3 mb-3 bg-info text-white " style="text-align: left;">當天預定入住/退房名單</div>
+                        <nav>
+                          <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active show" id="in1-tab" data-toggle="tab" href="#in1" role="tab" aria-controls="home" aria-selected="false">入住名單</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link " id="out1-tab" data-toggle="tab" href="#out1" role="tab" aria-controls="out1" aria-selected="true">退房名單</a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <div class="tab-content" id="myTabContent" style="width:100%">
+                          <div class="tab-pane fade active show" id="in1" role="tabpanel" aria-labelledby="in1-tab">
+                            <table class="table table-hover table-bordered" >
+                              <thead class="thead-light">
+                                <tr>
+                                  <th scope="col">入住棧點</th>
+                                  <th scope="col">入住日期</th>
+                                  <th scope="col">退房日期</th>
+                                  <th scope="col">申請人</th>
+                                  <th scope="col">連絡電話</th>
+                                  <th scope="col">照顧者</th>
+                                  <th scope="col">照顧者連絡電話</th>
+                                  <th scope="col">變更申請紀錄</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>1</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>2</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Mark</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>3</td>
+                                  <td>the Bird</td>
+                                  <td>@twitter</td>
+                                  <td>Mark</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="tab-pane fade " id="out1" role="tabpanel" aria-labelledby="out1-tab">
+                            <table class="table table-hover table-bordered" >
+                              <thead class="thead-light">
+                                <tr>
+                                  <th scope="col">入住棧點</th>
+                                  <th scope="col">入住日期</th>
+                                  <th scope="col">退房日期</th>
+                                  <th scope="col">申請人</th>
+                                  <th scope="col">連絡電話</th>
+                                  <th scope="col">照顧者</th>
+                                  <th scope="col">照顧者連絡電話</th>
+                                  <th scope="col">變更申請紀錄</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>1</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>FFF</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>2</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>DDD</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>3</td>
+                                  <td>the Bird</td>
+                                  <td>@twitter</td>
+                                  <td>ZZZ</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 p-3 mb-3 bg-info text-white " style="text-align: left;">入住/退房逾期回報提醒</div>                          
+                        <nav>
+                          <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active show" id="in2-tab" data-toggle="tab" href="#in2" role="tab" aria-controls="in2" aria-selected="false">入住逾期</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link " id="out2-tab" data-toggle="tab" href="#out2" role="tab" aria-controls="out2" aria-selected="true">退房逾期</a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <div class="tab-content" id="myTabContent" style="width:100%">
+                          <div class="tab-pane fade active show" id="in2" role="tabpanel" aria-labelledby="in2-tab">
+                            <table class="table table-hover table-bordered">
+                              <thead class="thead-light">
+                                <tr>
+                                  <th scope="col">入住棧點</th>
+                                  <th scope="col">入住日期</th>
+                                  <th scope="col">退房日期</th>
+                                  <th scope="col">申請人</th>
+                                  <th scope="col">連絡電話</th>
+                                  <th scope="col">照顧者</th>
+                                  <th scope="col">照顧者連絡電話</th>
+                                  <th scope="col">轉介人員</th>
+                                  <th scope="col">連絡電話</th>
+                                  <th scope="col">完成回報時間</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>1</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>2</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Mark</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>3</td>
+                                  <td>the Bird</td>
+                                  <td>@twitter</td>
+                                  <td>Mark</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="tab-pane fade " id="out2" role="tabpanel" aria-labelledby="out2-tab">
+                            <table class="table table-hover table-bordered">
+                              <thead class="thead-light">
+                                <tr>
+                                  <th scope="col">入住棧點</th>
+                                  <th scope="col">入住日期</th>
+                                  <th scope="col">退房日期</th>
+                                  <th scope="col">申請人</th>
+                                  <th scope="col">連絡電話</th>
+                                  <th scope="col">照顧者</th>
+                                  <th scope="col">照顧者連絡電話</th>
+                                  <th scope="col">轉介人員</th>
+                                  <th scope="col">連絡電話</th>
+                                  <th scope="col">完成回報時間</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>1</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>FFFFFF</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>2</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>DDDDDDD</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>3</td>
+                                  <td>the ZZAQE</td>
+                                  <td>@twitter</td>
+                                  <td>SSSS</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 p-2 mb-2 bg-warning" style="text-align: left; color: red;">服務回報待確定提醒</div>
+
+                        <div class="form-group col-md-12">
+                            <textarea class="form-control" rows="5" cols="40" id="inputResult" >
+未確認愛心房東服務N筆
+未確認愛心志工服務N筆
+未確認合作廠商服務N筆
+(請點選連結進入檢視頁面)
+</textarea>
+                            
+                        </div>
+
+                        <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content bottom">
+                                    <div class="modal-body" id="body">
+        
+                                    </div>
+                                    <div class="modal-footer bottom">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 bottom">
+                            <input type="button" class="btn btn-dark" value="上傳入住契約文件" id="btn_upload" onclick="upload()" disabled>
+                            <!-- <input type="button" class="btn btn-dark" value="進行入住程序" id="btn_check_in" onclick="checkin()" disabled> -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!--匯入jQuery-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!--匯入bootstrap javascript-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script type="text/javascript" src="js/jquery.twzipcode.min.js"></script>
+    <script type="text/javascript" src="js/jquery.twzipcode.js"></script>
+    <!---<script asnyc src="js/apply.js"></script>--->
+    <script src="js/url.js"></script>
+</html>

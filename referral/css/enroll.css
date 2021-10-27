@@ -1,0 +1,56 @@
+.wrapper {
+    background-color: #ddd;
+    min-height: 100vh;
+}
+
+.card {
+    padding: 0px !important;
+    background-color: #fefefe;
+    box-shadow: none !important;
+    /* border: none !important; */
+}
+
+input {
+    border: 1px solid #efefef;
+    background-color: #efefef;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.apply {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.with-errors {
+    color: red;
+    font-size: 12px;
+}
+
+.city {
+    margin-right: 10px;
+    float: left;
+}
+
+.town {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.btn-info {
+    width: 100px;
+    border-radius: 18px !important;
+    background-color: rgb(255, 110, 27) !important;
+    border-color: rgb(255, 110, 27) !important;
+}
+
+.btn-info:hover,
+.btn-info:active,
+.btn-info:visited {
+    width: 100px;
+    border-radius: 18px !important;
+    background-color: rgb(255, 21, 0) !important;
+    border-color: rgb(255, 21, 0) !important;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檢視入住/退房紀錄</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/view_room.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>檢視入住/退房紀錄</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 p-3 border rounded">
+                    <form id="form1">
+                        <h4 class="mb-4"><i class="fas fa-search"></i>查詢條件</h4>
+                        <div class="form-row px-4">
+                            <div class="col-md-12 divTitle">預約期間</div>
+
+                            <div class="form-group col-md-6">
+                                <label for="input_date_in" class="col-form-label addRedStar">開始日期<small class="ml-1 text-danger">(必填)</small></label>
+                                <input type="date" class="form-control" id="data_first">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="input_date_out" class="col-form-label addRedStar">最後日期<small class="ml-1 text-danger">(必填)</small></label>
+                                <input type="date" class="form-control" id="data_end">
+                            </div>
+
+
+                            <div class="col-md-12 divTitle">預約位置</div>
+                            <div class="form-group col-md-6">
+                                <label class="col-form-label addRedStar">選擇棧點<small class="ml-1 text-danger">(必填)</small></label>
+                                <select class="form-control" id="SelectHouse">
+                                    <option value="0">請選擇</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="col-form-label">房號</label>
+                                <select class="form-control" id="SelectRoom">
+                                    <!-- <option value="all">(全部)</option> -->
+                                </select>
+                            </div>
+
+
+                            <div class="col-md-12 divTitle">申請人</div>
+                            <div class="form-group col-md-5">
+                                <label class="col-form-label">關鍵字</label>
+                                <input class="form-control" type="text" placeholder="如需查詢請至少輸入一個字" id="people">
+                            </div>
+                            <div class="form-group col-md-2 btSearchDiv">
+                                <input class="btn btn-outline-success w-100" type="button" value="搜尋" onclick="query_people()">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label class="col-form-label">申請人姓名</label>
+                                <select class="form-control" id="SelectPeople">
+                                </select>
+                                <small>請先輸入關鍵字、按下搜尋，系統將為您更新對應的使用者列表</small>
+                            </div>
+                            <div class="form-group col-md-12 mt-5">
+                                <input type="button" class="btn btn-info w-100" value="查詢" onclick="query()">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div id="show_table" class="col-md-8 mt-5" style="display: none;">
+                    <div style="overflow-x: auto;">
+                        <table id="tableViewRoom" class="table">
+                            <thead class="thead-primary">
+                            <tr>
+                                <th>入住棧點</th>
+                                <th>房號</th>
+                                <th>入住日期</th>
+                                <th>退房日期</th>
+                                <th>申請人</th>
+                                <th>照顧者</th>
+                                <th>轉介單位</th>
+                                <th>轉介人員</th>
+                                <th>契約文件</th>
+                                <th>入住回報</th>
+                                <th>退房回報</th>
+                                <th>愛心棧問卷</th>
+                            </tr>
+                            </thead>
+                            <tbody class="tbody-primary">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/view_room.js"></script>
+  </body>
+
+</html>

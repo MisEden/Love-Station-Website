@@ -1,0 +1,29 @@
+.show_table{
+	overflow-x: auto;
+}
+
+.table{
+    table-layout:auto;
+}
+
+.table td {
+    padding: .34rem !important;
+    vertical-align: middle !important;
+}
+
+td{
+    height: 65px;
+}
+
+.bg-orange{
+    background-color: #e67e22;
+}
+
+.insertDiv-header{
+    margin: 15px 0px 0px 5px!important; 
+
+    font-size: 130%;
+    font-weight: bold;
+    
+    border-bottom: 1px solid #ececec;
+}

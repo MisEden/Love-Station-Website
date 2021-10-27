@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檢視變更需求單</title>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/touch-icon-iphone-retina.png" />
+    <link rel="stylesheet" href="css/nav2.css">
+    <link rel="stylesheet" href="css/table2.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="view_change.html" style="color: white; width: 220px;">
+        <img src="https://house.eden.org.tw/wp-content/uploads/2015/04/伊甸基金會LOGO.png" width="40" height="30"
+            class="d-inline-block align-top" alt="">
+        檢視就醫民眾需求變更
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="query_number.html">查詢轉介編號</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="rent.html">棧點入住申請</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="view_applyList.html">檢視申請單</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="view_change.html">檢視變更需求單</a>
+            </li>
+            <!-- <li>
+                    <a class="nav-link" href="javascript:clean()">登出</a>
+                </li> -->
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <div class="card">
+                <h4>就醫民眾需求變更申請</h4>
+                <div class="show_table">
+                    <table class="table" id="table1">
+                        <thead>
+                            <tr>
+                                <th>使用者姓名</th>
+                                <th>使用者電話</th>
+                                <th>照顧者電話</th>
+                                <th>詳細內容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+<script asnyc src="js/view_change.js"></script>
+<script src="js/url.js"></script>
+
+</html>

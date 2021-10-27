@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>檢視入住申請紀錄</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">
+    <style>
+        .card {
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="applyList.html" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        檢視入住申請紀錄
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="applyList.html">檢視入住申請紀錄</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="view_change.html">進行入住/退房時間變更</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="wrapper">
+        <section class="main">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="card-154297">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" data-parent="#card-154297"
+                                    href="#card-element-235603">▼特定搜尋</a>
+                            </div>
+                            <div id="card-element-235603" class="collapse">
+                                <form id="form1">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label class="col-form-label">請輸入欲查詢之入住日期區間:</label>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="input_date_in" class="col-form-label addRedStar">開始日期</label>
+                                            <input type="date" class="form-control" id="date_first">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="input_date_out" class="col-form-label addRedStar">最後日期</label>
+                                            <input type="date" class="form-control" id="date_end">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label class="col-form-label addRedStar">選擇棧點</label>
+                                            <select class="form-control" id="SelectHouse">
+                                                <option value="0">請選擇</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4 bottom">
+                                            <p></p>
+                                            <input type="button" class="btn btn-info" value="查詢" onclick="query()">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" data-parent="#card-154297"
+                                    href="#card-element-146388">▼搜尋結果</a>
+                            </div>
+                            <div id="card-element-146388" class="collapse show">
+                                <div class="card-body" style="overflow-x: auto;">
+                                    <div id="show_apply" style="overflow-x: auto;">
+                                        <table class="table" id="table1">
+                                            <thead>
+                                                <tr>
+                                                    <th>申請單號</th>
+                                                    <th>入住棧點</th>
+                                                    <th>入住日期</th>
+                                                    <th>退房日期</th>
+                                                    <th>審核結果</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center"></div>
+                <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content bottom">
+                            <div class="modal-body" id="body">
+                            </div>
+                            <div class="modal-footer bottom">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+<script asnyc src="js/applyList.js"></script>
+<script src="js/url.js"></script>
+
+</html>

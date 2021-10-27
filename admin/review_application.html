@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檢視入住申請單</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/view_room.css' />
+</head>
+
+
+<body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>檢視入住申請單</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div id="card-367278">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" data-parent="#card-367278" href="#card-element-892963">▼ 條件搜尋</a>
+                            </div>
+                            <div id="card-element-892963" class="collapse">
+                                <div class="card-body p-3">
+                                    <form id="form1">
+                                        <h4 class="mb-4"><i class="fas fa-search"></i>查詢條件</h4>
+                                        <div class="form-row px-4">
+                                            <div class="col-md-12 divTitle">預約期間</div>
+
+                                            <div class="form-group col-md-6">
+                                                <label for="input_date_in" class="col-form-label addRedStar">開始日期<small class="ml-1 text-danger">(必填)</small></label>
+                                                <input type="date" class="form-control" id="data_first">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="input_date_out" class="col-form-label addRedStar">最後日期<small class="ml-1 text-danger">(必填)</small></label>
+                                                <input type="date" class="form-control" id="data_end">
+                                            </div>
+
+
+                                            <div class="col-md-12 divTitle">預約位置</div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label addRedStar">選擇棧點</label>
+                                                <select class="form-control" id="SelectHouse">
+                                                    <option value="">搜尋全部</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">房號</label>
+                                                <select class="form-control" id="SelectRoom">
+                                                    <!-- <option value="all">(全部)</option> -->
+                                                </select>
+                                            </div>
+
+
+                                            <div class="col-md-12 divTitle">申請人</div>
+                                            <div class="form-group col-md-5">
+                                                <label class="col-form-label">關鍵字</label>
+                                                <input class="form-control" type="text" placeholder="如需查詢請至少輸入一個字" id="people">
+                                            </div>
+                                            <div class="form-group col-md-2 btSearchDiv">
+                                                <input class="btn btn-outline-success w-100" type="button" value="搜尋" onclick="query_people()">
+                                            </div>
+                                            <div class="form-group col-md-5">
+                                                <label class="col-form-label">申請人姓名</label>
+                                                <select class="form-control" id="SelectPeople">
+                                                </select>
+                                                <small>請先輸入關鍵字、按下搜尋，系統將為您更新對應的使用者列表</small>
+                                            </div>
+
+                                            <div class="col-md-12 divTitle">申請結果</div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label addRedStar">第一階段</label>
+                                                <select class="form-control" id="result_1st">
+                                                    <option value="">搜尋全部</option>
+                                                    <option value="1">通過</option>
+                                                    <option value="0">不通過</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label addRedStar">第二階段</label>
+                                                <select class="form-control" id="result_2nd">
+                                                    <option value="">搜尋全部</option>
+                                                    <option value="1">通過</option>
+                                                    <option value="0">不通過</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-md-12 mt-5">
+                                                <input type="button" class="btn btn-info w-100" value="條件查詢" onclick="query()">
+                                            </div>
+
+                                            <div class="form-group col-md-12 mt-1">
+                                                <input type="button" class="btn btn-danger w-100" value="清除條件" onclick="clean();">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" data-parent="#card-367278" href="#card-element-382180">▼ 搜尋結果</a>
+                            </div>
+                            <div id="card-element-382180" class="collapse show">
+                                <div class="card-body">
+                                    <div style="overflow-x: auto;">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td style="width:33%; padding: 15px 20px;">
+
+                                                </td>
+                                                <td style="width:34%; padding: 15px 20px; text-align: center;">
+                                                    <h3>查詢結果</h3>
+                                                </td>
+                                                <td style="width:33%;  padding: 15px 20px; text-align: right;">
+                                                    <input class="btn btn-warning" type="button" onclick="exportExcel();" value="輸出結果" style="width: 100%; height: 100%; max-width: 150px;">
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <table id="tableViewRoom" class="table">
+                                            <thead class="thead-primary">
+                                                <tr>
+                                                    <th>入住棧點</th>
+                                                    <th>房號</th>
+                                                    <th>入住日期</th>
+                                                    <th>退房日期</th>
+                                                    <th>申請人</th>
+                                                    <th>照顧者</th>
+                                                    <th>轉介單位</th>
+                                                    <th>轉介人員</th>
+                                                    <th>一階審核</th>
+                                                    <th>一階理由</th>
+                                                    <th>二階審核</th>
+                                                    <!-- <th>特殊變更</th> -->
+                                                    <th>是否取消</th>
+                                                    <th>檢視申請單</th>
+                                                    <th>提醒退房</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="tbody-primary">
+                                            </tbody>
+                                        </table>
+
+                                        <div class="row text-center">
+                                            <div class="col-md-12 text-center text-xs-center">
+                                                <nav style="margin: auto;">
+                                                    <ul class="pagination justify-content-center" id="pagination">
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/review_application.js"></script>
+</body>
+
+</html>

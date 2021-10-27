@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>查詢轉介編號</title>
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+  <a class="navbar-brand" href="query_numer.html" style="color: white;">
+    <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    轉介編號產生/查詢
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="query_number.html">查詢轉介編號</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="rent.html">棧點入住申請</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="view_applyList.html">檢視申請單</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="view_change.html">檢視變更需求單</a>
+      </li>
+      <!-- <li>
+            <a class="nav-link" href="javascript:clean()">登出</a>
+          </li> -->
+    </ul>
+  </div>
+</nav>
+
+<body>
+  <div class="wrapper">
+    <section class="main">
+      <div class="card apply">
+        <div class="container">
+          <div class="row justify-content-center">
+            <form id="form1" data-toggle="validator" class="form">
+              <div class="form-row">
+
+                <div class="form-group col-md-12">
+                  <label class="col-form-label" for="QueryId">請輸入欲查詢之身分證字號</label>
+                  <input class="form-control" type="text" id="QueryId" placeholder="英文字母請大寫" pattern="^[A-Z]\d{9}$"
+                    data-error="格式錯誤" required>
+                  <div class="help-block with-errors"></div>
+                </div>
+
+                <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content bottom">
+                      <div class="modal-body" id="body">
+
+                      </div>
+                      <div class="modal-footer bottom">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <input type="button" class="btn btn-info" value="查詢" onclick="query()">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script asnyc src="js/query.js"></script>
+<script src="js/url.js"></script>
+
+</html>

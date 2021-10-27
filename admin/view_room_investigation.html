@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛心棧問卷</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/view_room_checkin.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>愛心棧問卷</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 border rounded">
+                    <form id="form1" class="form" data-toggle="validator" >
+                        <div class="form-row">
+                            <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;margin-top:  10px;">您對於伊甸愛心棧「服務」的滿意度</div>
+                            <div class="form-group col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">1. 您對於愛心棧的整體「服務效率」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=a1></span>
+                                        <span class="fa fa-star " id=a2></span>
+                                        <span class="fa fa-star " id=a3></span>
+                                        <span class="fa fa-star" id=a4></span>
+                                        <span class="fa fa-star" id=a5></span> 
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">2. 您對於愛心棧的整體「服務態度」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=b1></span>
+                                        <span class="fa fa-star " id=b2></span>
+                                        <span class="fa fa-star " id=b3></span>
+                                        <span class="fa fa-star" id=b4></span>
+                                        <span class="fa fa-star" id=b5></span>
+                                    </div>
+                                </div>
+    
+                                
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">3. 對於愛心棧的整體「服務品質」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=c1></span>
+                                        <span class="fa fa-star " id=c2></span>
+                                        <span class="fa fa-star " id=c3></span>
+                                        <span class="fa fa-star" id=c4></span>
+                                        <span class="fa fa-star" id=c5></span> 
+                                    </div>
+                                </div>
+    
+                            </div>
+
+                            <div id="public" class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">您對於伊甸愛心棧「設備」的滿意度</div>
+                            <div class="form-group col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">1. 您對於愛心棧整體的「家俱設備」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=d1></span>
+                                        <span class="fa fa-star " id=d2></span>
+                                        <span class="fa fa-star " id=d3></span>
+                                        <span class="fa fa-star" id=d4></span>
+                                        <span class="fa fa-star" id=d5></span> 
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">2. 您對於愛心棧整體的「電器設備」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=e1></span>
+                                        <span class="fa fa-star " id=e2></span>
+                                        <span class="fa fa-star " id=e3></span>
+                                        <span class="fa fa-star" id=e4></span>
+                                        <span class="fa fa-star" id=e5></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">3. 您對於愛心棧整體的「輔具設備」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=f1></span>
+                                        <span class="fa fa-star " id=f2></span>
+                                        <span class="fa fa-star " id=f3></span>
+                                        <span class="fa fa-star" id=f4></span>
+                                        <span class="fa fa-star" id=f5></span> 
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">4. 您對於愛心棧整體的「寢具設備」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=g1></span>
+                                        <span class="fa fa-star " id=g2></span>
+                                        <span class="fa fa-star " id=g3></span>
+                                        <span class="fa fa-star" id=g4></span>
+                                        <span class="fa fa-star" id=g5></span>  
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">5. 您對於愛心棧整體的「無障礙環境」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=h1></span>
+                                        <span class="fa fa-star " id=h2></span>
+                                        <span class="fa fa-star " id=h3></span>
+                                        <span class="fa fa-star" id=h4></span>
+                                        <span class="fa fa-star" id=h5></span>  
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div id="public" class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">您對於伊甸愛心棧「環境」的滿意度</div>
+                            <div class="form-group col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">1. 您對於愛心棧整體的「環境清潔」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=i1></span>
+                                        <span class="fa fa-star " id=i2></span>
+                                        <span class="fa fa-star " id=i3></span>
+                                        <span class="fa fa-star" id=i4></span>
+                                        <span class="fa fa-star" id=i5></span> 
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">2. 您對於愛心棧整體的「環境舒適」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=j1></span>
+                                        <span class="fa fa-star " id=j2></span>
+                                        <span class="fa fa-star " id=j3></span>
+                                        <span class="fa fa-star" id=j4></span>
+                                        <span class="fa fa-star" id=j5></span>
+                                    </div>
+                                </div>
+                                 
+                            </div>
+
+                            <div id="public" class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">您對於伊甸愛心棧安全的滿意度</div>
+                            <div class="form-group col-md-12">
+
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">1. 您對於愛心棧整體的「消防安全」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=k1></span>
+                                        <span class="fa fa-star " id=k2></span>
+                                        <span class="fa fa-star " id=k3></span>
+                                        <span class="fa fa-star" id=k4></span>
+                                        <span class="fa fa-star" id=k5></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <label class="col-form-label" for="">2. 您對於中興保全「緊急救援通報糸統」</label>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <span class="fa fa-star " id=l1></span>
+                                        <span class="fa fa-star " id=l2></span>
+                                        <span class="fa fa-star " id=l3></span>
+                                        <span class="fa fa-star" id=l4></span>
+                                        <span class="fa fa-star" id=l5></span>
+                                    </div>
+                                </div>                                 
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/view_room_investigation.js"></script>
+  </body>
+
+</html>

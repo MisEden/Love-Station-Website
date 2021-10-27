@@ -1,0 +1,33 @@
+.container{
+    margin-top:10px
+}
+#show_date{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    text-align:center!important
+}
+#show_date .ui-datepicker {
+    font-size: 120%
+}
+.ui-datepicker-calendar a { 
+    color: black !important; 
+    background-color: greenyellow !important; 
+}
+.ui-state-disabled span{
+    background-color: rgb(160, 31, 31) !important; 
+}
+
+.btn{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.ui-datepicker-calendar a { 
+    color: black !important; 
+    background-color: greenyellow !important; 
+}
+.red{
+    color: black !important; 
+    background-color: rgb(255, 47, 47) !important; 
+}

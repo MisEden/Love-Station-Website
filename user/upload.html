@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/upload.css">
+        <title>上傳入住契約書</title>
+    </head>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+        <a class="navbar-brand" href="applyList.html" style="color: white;">
+            <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            上傳入住契約書
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" >
+                    <a class="nav-link active" href="applyList.html">檢視入住申請紀錄</a>
+                </li>
+            <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">進行入住確認程序</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">進行退房確認程序</a>
+                </li> -->
+                <!-- <li>
+                    <a class="nav-link" href="javascript:clean()">登出</a>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+    <body>
+
+        <div class="wrapper">
+            <section class="main">
+                <div class="card apply">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                           
+
+                                <form id="form1" data-toggle="validator" class="form" enctype="multipart/form-data" method="POST">
+                                    <div class="form-row">
+        
+                                        <div class="form-group col-md-12">
+                                            <label for="inputGroupFile01">
+                                                <a id="file1">入住契約書</a>上傳(請拍攝完整檔案)</label>
+                                            <div>
+                                                <input type="file" id="file-uploader1" name="rentImage" data-target="file-uploader" accept=".heic, .hevc, .heif, .pdf, .png, .gif, .jpg, .jpeg" />
+                                                <div id="image" class="bottom">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <label for="inputGroupFile02">
+                                                <a id="file2">切結書</a>上傳(請拍攝完整檔案)</label>
+                                            <div>
+                                                <input type="file" id="file-uploader2" name="affidavitImage" data-target="file-uploader" accept=".heic, .hevc, .heif, .pdf, .png, .gif, .jpg, .jpeg" />
+                                                <div id="image2" class="bottom">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content bottom">
+                                                    <div class="modal-body" id="body">
+                        
+                                                    </div>
+                                                    <div class="modal-footer bottom">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 bottom">
+                                            <input type="button" class="btn btn-info" value="上傳檔案" id="sendFile" onclick="sendImg()" style="display: none;"/>
+
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="loader" class="lds-dual-ring hidden overlay">
+            </div>
+        </div>
+        
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script asnyc src="js/watermark.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/url.js"></script>
+</html>

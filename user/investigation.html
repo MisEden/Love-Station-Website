@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>愛心棧服務問卷調查</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/invest.css">
+        <link rel="stylesheet" href="css/rating.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+        <a class="navbar-brand" href="check_in.html" style="color: white;">
+            <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            愛心棧服務問卷調查
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" >
+                    <a class="nav-link" href="applyList.html">檢視入住申請紀錄</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="check_in.html">進行入住確認程序</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="check_out.html">進行退房確認程序</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="javascript:clean()">登出</a>
+                </li> -->
+            </ul>
+        </div>
+      </nav>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-12">
+                    <div class="about-preview">
+                        <h4 style="text-align: center;">伊甸社會福利基金會<br> 「愛心棧服務」問卷調查</h4>
+                        <p class="para">您好<br>
+                            感謝您參與住宿使用後調查活動，此次問卷的宗旨為瞭解「愛心棧」服務及住宿環境之滿意度調查。
+                            您真實的答覆與建議有助於愛心棧服務品質的調整及提升，以利於提供良好住宿服務及住宿環境。<br>
+                            <p>再次感謝您所提供寶貴的資料，予以本服務改善與持續進步。</p>
+                            <p>敬祝</p>
+                            <p>身體健康  萬事如意</p>
+                            <p style="text-align: right;">財團法人伊甸社會福利基金會</p>
+                            <p style="text-align: right;">愛心棧 敬上</p>    
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content bottom">
+                            <div class="modal-body" id="body">
+
+                            </div>
+                            <div class="modal-footer bottom">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <form id="form1" class="form" data-toggle="validator" style="display: none;">
+                    <div class="form-row">
+                        
+                        <!-- <div id="public" class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">入住申請者基本資料</div>
+
+                        <div class="form-group col-md-12">
+                            <label class="col-form-label" for="">填表日期</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label" for="">入住棧點</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label" for="">房間編號</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label" for="">入住日期</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label" for="">退房日期</label>
+                            <input type="date" class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label" for="">申請人姓名</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label" for="">照顧人姓名</label>
+                            <input type="text" class="form-control">
+                        </div> -->
+
+                        <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">您對於伊甸愛心棧服務的滿意度</div>
+                        <div class="form-group col-md-6">
+
+                            <label class="col-form-label" for="">1. 您對於愛心棧的整體「服務效率」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank1"></div>
+
+                            <label class="col-form-label" for="">2. 您對於愛心棧的整體「服務態度」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank2"></div>
+
+                            <label class="col-form-label" for="">3. 對於愛心棧的整體「服務品質」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank3"></div>
+
+                        </div>
+
+                        <div id="public" class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">您對於伊甸愛心棧設備的滿意度</div>
+                        <div class="form-group col-md-6">
+
+                            <label class="col-form-label" for="">1. 您對於愛心棧整體的「家俱設備」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank4"></div>
+
+                            <label class="col-form-label" for="">2. 您對於愛心棧整體的「電器設備」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank5"></div>
+
+                            <label class="col-form-label" for="">3. 您對於愛心棧整體的「輔具設備」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank6"></div>
+
+                            <label class="col-form-label" for="">4. 您對於愛心棧整體的「寢具設備」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank7"></div>
+
+                            <label class="col-form-label" for="">5. 您對於愛心棧整體的「無障礙環境」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank8"></div>
+                        </div>
+
+                        <div id="public" class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">您對於伊甸愛心棧環境的滿意度</div>
+                        <div class="form-group col-md-6">
+
+                            <label class="col-form-label" for="">1. 您對於愛心棧整體的「環境清潔」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank9"></div>
+
+                            <label class="col-form-label" for="">2. 您對於愛心棧整體的「環境舒適」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank10"></div>
+                        </div>
+
+                        <div id="public" class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">您對於伊甸愛心棧安全的滿意度</div>
+                        <div class="form-group col-md-6">
+
+                            <label class="col-form-label" for="">1. 您對於愛心棧整體的「消防安全」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank11"></div>
+
+                            <label class="col-form-label" for="">2. 您對於中興保全「緊急救援通報糸統」</label>
+                            <div class="ui star huge rating" data-rating="5" id="rank12"></div>
+                        </div>
+                        <div class="col-md-12 bottom">
+                            <input type="button" class="btn btn-dark" value="送出回饋單" id="first2" onclick="finish()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="js/rating.js"></script>
+    <script asnyc src="js/invest.js"></script>
+    <script src="js/url.js"></script>
+    <script src="js/url.js"></script>
+</html>

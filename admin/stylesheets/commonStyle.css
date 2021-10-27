@@ -1,0 +1,155 @@
+html, body{
+  font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;
+}
+
+body {
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+
+.body-content{
+  padding: 25px 50px 200px 50px;
+}
+
+@media screen and (max-width: 991px) {
+  .body-content{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.row{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+.bg-primary{
+  background-color: #FE7019 !important;
+}
+
+.btn-primary{
+  background-color: #FE7019 !important;
+  border: 0px;
+}
+
+/* i */
+i{
+  margin-right: 10px;
+}
+
+.fa-times-circle{
+  color:orangered;
+}
+
+.fa-check-circle{
+  color:seagreen;
+}
+
+
+/* input css */
+html *, html *:focus, html *:active{
+  outline: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input:disabled, button:disabled {
+  cursor: not-allowed;
+}
+
+
+/* table */
+table{
+  margin-left: 10px;
+  margin-right: 10px;
+  table-layout:auto;
+}
+
+.table td, .table th {
+  vertical-align: middle !important;
+  text-align: center;
+  width: 1%; 
+  white-space: nowrap;
+}
+
+
+.thead-primary{
+  background-color: #d15203;
+  color: #FFF;
+}
+
+.tbody-primary{
+  background-color: #FFEFD3;
+}
+
+/* nav pills */
+.nav-pills{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav-pills > .nav-item > a{
+  color: #222;
+  font-weight: bold;
+}
+
+/* navbar */
+.ul-right{
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+@media screen and (max-width: 991px) {
+  .ul-right {
+    padding-right: auto;
+    text-align: left;
+  }
+
+  .ul-right > .ml-auto{
+    margin-left: 0px !important;
+  }
+}
+
+/* body header */
+.breadcrumbRow{
+  /* background-color: #fff;  */
+  padding-top: 30px;
+  margin-bottom: 0px;
+}
+
+.breadcrumb{
+  background-color: #fff; 
+  border: 1px solid #e9ecef;;
+}
+
+/* form */
+.divTitle{
+  border-bottom: 1px solid #ececec;
+  font-size: 16pt;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form-label{
+  color: rgb(255, 123, 0);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-check-input {
+  position: relative !important;
+  margin-right: 0.5rem;
+}

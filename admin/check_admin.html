@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理員帳號申請</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/check_admin.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>管理員帳號申請</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="card-597836">
+                        <div class="card">
+                            <div class="card-header">
+                                 <a class="card-link" data-toggle="collapse" data-parent="#card-597836" href="#card-element-719438">▼ 申請資訊</a>
+                            </div>
+                            <div id="card-element-719438" class="collapse show">
+                                <div class="card-body">
+                                    <div class="row w-100">
+                                        <div class="col-2"></div>
+                                        <div class="col-8 border rounded">
+                                            <div class="row">
+                                
+                                                <div class="form-group col-md-12 insertDiv-header">帳戶資訊</div>
+                                                    
+                                                <div class="form-group col-md-12">
+                                                    <label class="col-form-label" for="admin_account">帳號名稱</label>
+                                                    <input class="form-control" type="text" id="admin_account" readonly>
+                                                </div>
+                                
+                                                <div class="form-group col-md-12 insertDiv-header">聯絡資訊</div>
+                                                <div class="form-group col-md-5">
+                                                    <label class="col-form-label" for="admin_name">管理員姓名</label>
+                                                    <input class="form-control" type="text" id="admin_name" readonly>
+                                                </div>
+                                                <div class="form-group col-md-7">
+                                                    <label class="col-form-label" for="admin_email">管理員信箱</label>
+                                                    <input class="form-control" type="text" id="admin_email" readonly>
+                                                    <small class="pl-3">*審核通過的訊息將會以電子信箱通知</small>
+                                                </div>
+                                
+                                                <div class="form-group col-md-12 insertDiv-header">帳戶權限</div>
+                                                    
+                                                <div class="form-group col-md-12">
+                                                    <label class="col-form-label" for="admin_authority">帳號權限</label>
+                                                    <select class="form-control" id="admin_authority" disabled>
+                                                        <option value="admin_readonly" selected>唯讀管理員</option>
+                                                    </select>
+                                                    <small class="pl-3">*預設為「唯讀管理員」</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                 <a class="collapsed card-link" data-toggle="collapse" data-parent="#card-597836" href="#card-element-735279">▼ 審核申請</a>
+                            </div>
+                            <div id="card-element-735279" class="collapse show">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <div class="custom-control custom-radio my-3">
+                                                <input type="radio" id="customRadio" name="customRadio" class="custom-control-input" value="pass" checked>
+                                                <label class="custom-control-label" for="customRadio">通過</label>
+                                            </div>
+                                            <div class="custom-control custom-radio my-3">
+                                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="change">
+                                                <label class="custom-control-label" for="customRadio1">通過，修改權限為
+                                                    <select id="selectAuthority" class="box p-1">
+                                                        <option value="admin">系統管理員</option>
+                                                        <option value="admin_writable">可寫管理員</option>
+                                                        <option value="admin_readonly" selected>唯讀管理員</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-radio my-3">
+                                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="fail">
+                                                <label class="custom-control-label w-100" for="customRadio2">不通過，並刪除此申請，原因：
+                                                    <div>
+                                                        <textarea  rows="5" maxlength="100" class="col-md-12" id="reason" style="width: 100%;"></textarea>
+                                                    </div>
+                                                </label>
+                                            </div>
+
+                                               
+                                            <div id="bottom" class="form-group col-md-12 text-center" style="margin: 50px auto 25px auto;">
+                                                <input type="button" class="btn btn-success btn-lg btn-block" value="審核完成" onclick="finish()">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/check_admin.js"></script>
+  </body>
+
+</html>

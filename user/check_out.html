@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>退房程序確認</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/check.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="check_in.html" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt=""> 退房程序確認
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="applyList.html">檢視入住申請紀錄</a>
+            </li>
+            <!-- <li class="nav-item">
+                    <a class="nav-link" href="check_in.html">進行入住確認程序</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">進行退房確認程序</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="javascript:clean()">登出</a>
+                </li> -->
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="container">
+        <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content bottom">
+                    <div class="modal-body" id="body">
+
+                    </div>
+                    <div class="modal-footer bottom">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <form id="form1" class="form" data-toggle="validator" style="display: none;">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <ol>
+                            <li>
+                                <label class="col-form-label title">寢具</label>
+                                <div>
+                                    <p>使用後之寢具(床被單、枕頭套)，請摘除後置於洗衣籃內，以利廠商清洗</p>
+                                    <input type="radio" id='bedding_ok' name="bedding" value="已完成"><label for="bedding_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='bedding_no' name="bedding" value="未完成" style="margin-top: 5px;"><label for="bedding_no">否，因為：</label>
+                                        <input type="text" id="bedding_reason" name="bedding_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">衛浴</label>
+                                <div>
+                                    <p>請務必清潔乾淨後再離開。垃圾請打包帶走</p>
+                                    <input type="radio" id='shower_ok' name="shower" value="已完成"><label for="shower_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='shower_no' name="shower" value="未完成" style="margin-top: 5px;"><label for="shower_no">否，因為：</label>
+                                        <input type="text" id="shower_reason" name="shower_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">冰箱</label>
+                                <div>
+                                    <p>請將冰箱清空，食物、藥品、營養品等全數帶走。</p>
+                                    <input type="radio" id='frig_ok' name="frig" value="已完成"><label for="frig_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='frig_no' name="frig" value="未完成" style="margin-top: 5px;"><label for="frig_no">否，因為：</label>
+                                        <input type="text" id="frig_reason" name="frig_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">私人物品</label>
+                                <div>
+                                    <p>請將所有使用/未使用之私人物品全數帶走。</p>
+                                    <input type="radio" id='personal_stuff_ok' name="personal_stuff" value="已完成"><label for="personal_stuff_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='personal_stuff_no' name="personal_stuff" value="未完成" style="margin-top: 5px;"><label for="personal_stuff_no">否，因為：</label>
+                                        <input type="text" id="personal_stuff_reason" name="personal_stuff_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">垃圾</label>
+                                <div>
+                                    <p>垃圾請全數清理並帶走。</p>
+                                    <input type="radio" id='garbage_ok' name="garbage" value="已完成"><label for="garbage_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='garbage_no' name="garbage" value="未完成" style="margin-top: 5px;"><label for="garbage_no">否，因為：</label>
+                                        <input type="text" id="garbage_reason" name="garbage_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">門窗/電源</label>
+                                <div>
+                                    <p>* 請確認窗戶緊閉，拉上窗簾，房門上鎖。<br> * 離開時請確認已關閉房間及公共區域各項電器電源。
+                                    </p>
+                                    <input type="radio" id='door_power_ok' name="door_power" value="已完成"><label for="door_power_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='door_power_no' name="door_power" value="未完成" style="margin-top: 5px;"><label for="door_power_no">否，因為：</label>
+                                        <input type="text" id="door_power_reason" name="door_power_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">通報保全</label>
+                                <div>
+                                    <p>請確實通報中興保全24小時緊急救援通報系統，告知退房。</p>
+                                    <p>(1)按壓通報系統方型紅色鈕約3秒（請參見圖示），聽到嗶一聲後放開，等候連線(通報連線中請稍候)。<br> (2)連線後告知「姓名」及「退房房號」。
+                                    </p>
+                                    <input type="radio" id='security_ok' name="security" value="已完成"><label for="security_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='security_no' name="security" value="未完成" style="margin-top: 5px;"><label for="security_no">否，因為：</label>
+                                        <input type="text" id="security_reason" name="security_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">繳回入住文件</label>
+                                <div>
+                                    <p>自助入住者，請退房時將紙本簽署文件投至指定實體信箱。</p>
+                                    <p>* 切結書<br> * 入住契約書
+                                    </p>
+                                    <input type="radio" id='return_ok' name="return" value="已完成"><label for="return_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='return_no' name="return" value="未完成" style="margin-top: 5px;"><label for="return_no">否，因為：</label>
+                                        <input type="text" id="return_reason" name="return_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">交還鑰匙</label>
+                                <div>
+                                    <p>請將房門鑰匙(含感應磁扣)交還指定之處。</p>
+                                    <input type="radio" id='key_ok' name="key" value="已完成"><label for="key_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='key_no' name="key" value="未完成" style="margin-top: 5px;"><label for="key_no">否，因為：</label>
+                                        <input type="text" id="key_reason" name="key_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ol>
+                    </div>
+                    <div class="col-md-12 bottom">
+                        <input type="button" class="btn btn-dark" value="送出" id="check_out" onclick="validate_all()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script asnyc src="js/check_out.js"></script>
+<script src="js/url.js"></script>
+
+</html>

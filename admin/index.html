@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛心棧系統首頁</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/index.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="wrapper imageHeader" style="background-image: url(images/index-header.jpg)">
+          <div id="pageintro" class="hoc clear"> 
+            <article>
+              <p>愛心棧管理後台</p>
+              <h3 class="heading">管理員，您好</h3>
+              <p>此為伊甸「愛心棧系統」的管理後台介面。<br>您可從下方取得當日重要資訊，或從上方選單列進入其他進階設定的頁面。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="body-content">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="alert_main" class="alert alert-dismissable" style="display: none;">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <h4 style="font-weight: bold;"></h4> 
+              <span class="pl-5" style="font-size: 120%;"></span>
+              <span class="pl-5" style="font-size: 120%;"></span>
+              <span class="pl-5" style="font-size: 120%;"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h4><i class="fas fa-list"></i>待審核入住申請單 <small>（請點擊申請單編號進入審核頁面）</small></h4>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <div class="show_table" style="overflow-x: auto;">
+                  <table id="table_apply_checkinApplication" class="table">
+                    <thead class="thead-primary">
+                      <tr>
+                        <th>申請單編號</th>
+                        <th>申請日期</th>
+                        <th>轉介單位名稱</th>
+                        <th>轉介人員</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody-primary">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h4><i class="fas fa-list"></i>待審核入住契約文件 <small>（請點擊申請單編號進入審核頁面）</small></h4>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="show_table" style="overflow-x: auto;">
+                  <table id="table_apply_chackinApplicationImage" class="table">
+                    <thead class="thead-primary">
+                      <tr>
+                        <th>申請單編號</th>
+                        <th>申請人</th>
+                        <th>申請日期</th>
+                        <th>轉介單位名稱</th>
+                        <th>轉介人員</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody-primary">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h4><i class="fas fa-list"></i>待審核入住變更單 <small>（請點擊申請單編號進入審核頁面）</small></h4>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <div class="show_table" style="overflow-x: auto;">
+                  <table id="table_apply_changeApply" class="table">
+                    <thead class="thead-primary">
+                      <tr>
+                        <th>申請單編號</th>
+                        <th>申請日期</th>
+                        <th>轉介單位名稱</th>
+                        <th>轉介人員</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody-primary">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h4><i class="fas fa-list"></i>待指派志工與廠商</h4>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="show_table" style="overflow-x: auto;">
+                  <table id="table_apply_chackinApplicationAssign" class="table">
+                    <thead class="thead-primary">
+                      <tr>
+                        <th>申請單編號</th>
+                        <th>入住棧點</th>
+                        <th>入住房號</th>
+                        <th>申請日期</th>
+                        <th>入住使用者</th>
+                        <th>選擇服務廠商</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody-primary">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h4><i class="fas fa-list"></i>當天預定入住/退房名單</h4>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="show_table" style="overflow-x: auto;">
+                  <ul class="nav nav-pills">
+                    <li class="nav-item">
+                       <a id="navItem_checkin" class="nav-link text-white btn btn-primary" href="javascript:void(0);" onclick="changeTab('checkin');">入住回報</a>
+                    </li>
+                    <li class="nav-item">
+                       <a id="navItem_checkout" class="nav-link" href="javascript:void(0);" onclick="changeTab('checkout');">退房回報</a>
+                    </li>
+                  </ul>
+                  <table id="table_TodayList" class="table">
+                    <thead class="thead-primary">
+                      <tr>
+                        <th>入住棧點</th>
+                        <th>入住日期</th>
+                        <th>退房日期</th>
+                        <th>申請人</th>
+                        <th>申請人電話</th>
+                        <th>照顧者</th>
+                        <th>完成回報時間</th>
+                        <th>上次通知時間</th>
+                        <th>通知相關人員<small>(Line)</small></th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody-primary">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h4><i class="fas fa-list"></i>待確認服務回報</h4>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="show_table" style="overflow-x: auto;">
+                  <table id="table_nonView_service" class="table">
+                    <thead class="thead-primary">
+                      <tr>
+                        <th>回報類型</th>
+                        <th>待審核數</th>
+                        <th>檢視</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody-primary">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/index.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合作單位帳號管理</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/partners.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>合作單位帳號管理</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row" style="width: 100%;">
+                        <div class="form-group col-md-10" style="padding-left: 30px;">
+                            <label class="col-form-label" for="keyword">關鍵字</label>
+                            <input class="form-control" type="text" id="keyword" placeholder="台北">
+                            <small class="form-text text-muted">清除文字後按下查詢可顯示全部資料</small>
+                        </div>
+                        <div class="form-group col-md-2" style="vertical-align: bottom;">
+                            <label class="col-form-label" for="btn_query">&nbsp;</label>
+                            <input id="btn_query" type="button" class="btn btn-info" value="查詢" onclick="query()" style="width:100%;">
+                        </div>
+                    </div>
+                    
+                    <!-- 轉介單位、愛心房東、愛心志工、合作廠商 -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a id="navTab_referral" class="nav-link active" data-toggle="tab" href="javascript:void(0);" onclick="changeTab('referral');" role="tab" aria-selected="true">轉介單位</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navTab_firm" class="nav-link" data-toggle="tab" href="javascript:void(0);" onclick="changeTab('firm');" role="tab" aria-selected="false">合作廠商</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navTab_landlord" class="nav-link" data-toggle="tab" href="javascript:void(0);" onclick="changeTab('landlord');" role="tab" aria-selected="false">愛心房東</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navTab_volunteer" class="nav-link" data-toggle="tab" href="javascript:void(0);" onclick="changeTab('volunteer');" role="tab" aria-selected="false">愛心志工</a>
+                        </li>
+                    </ul>
+                
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="card-48875">
+                                <div id="insertDiv" class="card">
+                                    <div class="card-header bg-gray text-white">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td style="height: 1px !important;">
+                                                    <a class="card-link" data-toggle="collapse" data-parent="#card-48875" href="#card-element-496344">▼ 新增</a>
+                                                </td>
+                                                <td style="width: 50px; height: 1px !important; padding-right: 20px;">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="card-element-496344" class="collapse">
+                                        <div class="card-body">
+                                            <div id="divInsert_referral" class="form-row" style="display: none;">
+
+                                                <div class="form-group col-md-3">
+                                                    <label class="col-form-label" for="insertReferral_city">單位縣市<small class="ml-1 text-danger">(必填)</small></label>
+                                                    <select class="form-control" id="insertReferral_city">
+                                                        <option value="台北市">台北市</option>    
+                                                        <option value="基隆市">基隆市</option>    
+                                                        <option value="新北市">新北市</option>    
+                                                        <option value="宜蘭縣">宜蘭縣</option>    
+                                                        <option value="桃園市">桃園市</option>    
+                                                        <option value="新竹市">新竹市</option>    
+                                                        <option value="新竹縣">新竹縣</option>    
+                                                        <option value="苗栗縣">苗栗縣</option>    
+                                                        <option value="台中市">台中市</option>    
+                                                        <option value="彰化縣">彰化縣</option>    
+                                                        <option value="南投縣">南投縣</option>    
+                                                        <option value="嘉義市">嘉義市</option>    
+                                                        <option value="嘉義縣">嘉義縣</option>    
+                                                        <option value="雲林縣">雲林縣</option>    
+                                                        <option value="台南市">台南市</option>    
+                                                        <option value="高雄市">高雄市</option>    
+                                                        <option value="澎湖縣">澎湖縣</option>    
+                                                        <option value="金門縣">金門縣</option>    
+                                                        <option value="屏東縣">屏東縣</option>    
+                                                        <option value="台東縣">台東縣</option>    
+                                                        <option value="花蓮縣">花蓮縣</option>    
+                                                        <option value="連江縣">連江縣</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label class="col-form-label" for="insertReferral_chineseName">中文名稱<small class="ml-1 text-danger">(必填)</small></label>
+                                                    <input class="form-control" type="text" id="insertReferral_chineseName" placeholder="國立臺灣大學醫學院附設癌醫中心醫院">
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label class="col-form-label" for="insertReferral_englishName">英文名稱<small class="ml-1 text-danger">(必填)</small></label>
+                                                    <input class="form-control" type="text" id="insertReferral_englishName" placeholder="NTU Cancer Center">
+                                                </div>
+                                                <div class="form-group col-md-3" style="padding-right: 15px;">
+                                                    <label class="col-form-label" for="insertReferral_number">轉介編號<small class="ml-1 text-danger">(必填)</small></label>
+                                                    <input class="form-control" type="text" id="insertReferral_number" placeholder="ntucc-tpe">
+                                                </div>
+                                                <div class="w-100 text-center">
+                                                    <input id="btnHouseImages" class="btn btn-success mx-auto" type="button" onclick="insertReferral();" value="新增" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                            <div id="divInsert_firm" class="form-row" style="display: none;">
+                                                <div class="form-group col-md-12 insertDiv-header">廠商基本資訊</div>
+    
+                                                <div class="form-group col-md-4">
+                                                    <label class="col-form-label" for="insertFirm_name">廠商名稱<small class="ml-1 text-danger">(必填)</small></label>
+                                                    <input class="form-control" type="text" id="insertFirm_name" placeholder="冠軍清潔公司(必填)">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label class="col-form-label" for="insertFirm_address">廠商地址</label>
+                                                    <input class="form-control" type="text" id="insertFirm_address" placeholder="台北市中正區忠孝西路一段49號">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label class="col-form-label" for="insertFirm_phone">廠商電話</label>
+                                                    <input class="form-control" type="text" id="insertFirm_phone" placeholder="0223883938">
+                                                </div>
+    
+    
+                                                <div class="form-group col-md-12 insertDiv-header">廠商代表聯絡資訊</div>
+                                                <div class="form-group col-md-3">
+                                                    <label class="col-form-label" for="insertFirm_contactName">聯絡人姓名</label>
+                                                    <input class="form-control" type="text" id="insertFirm_contactName" placeholder="王惠雅">
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label class="col-form-label" for="insertFirm_contactTitle">聯絡人職稱</label>
+                                                    <input class="form-control" type="text" id="insertFirm_contactTitle" placeholder="行政助理">
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label class="col-form-label" for="insertFirm_contactPhone">聯絡人電話</label>
+                                                    <input class="form-control" type="text" id="insertFirm_contactPhone" placeholder="0223883938#239">
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label class="col-form-label" for="insertFirm_contactEmail">聯絡人信箱</label>
+                                                    <input class="form-control" type="text" id="insertFirm_contactEmail" placeholder="employee@company.com.tw">
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <input id="btnHouseImages" class="btn btn-success col-md-12 mx-auto" type="button" onclick="insertFirm();" value="新增">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header bg-gray text-white">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td style="height: 1px !important;">
+                                                    <a class="collapsed card-link" data-toggle="collapse" data-parent="#card-48875" href="#card-element-294310">▼ 清單</a>
+                                                </td>
+                                                <td style="width: 50px; height: 1px !important; padding-right: 20px;">
+                                                    <input id="btn_export" class="btn btn-warning" type="button" onclick="exportExcel();" value="輸出結果" style="width: 100%;">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="card-element-294310" class="collapse show">
+                                        <div class="card-body">
+                                            <div id="divTable_referral" class="show_table" style="display: none;">
+                                                <table class="table" id="table_referral" style="table-layout:auto;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>單位縣市</th>
+                                                            <th>中文名稱</th>
+                                                            <th>英文名稱</th>
+                                                            <th>轉介編號</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        
+                                                    </tbody>
+                                                </table>
+                
+                                                <div class="row text-center">
+                                                    <div class="col-md-12 text-center text-xs-center">
+                                                        <nav style="margin: auto;">
+                                                            <ul class="pagination justify-content-center" id="pagination_referral">
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div id="divTable_firm" class="show_table" style="display: none;">
+                                                <table class="table" id="table_firm" style="table-layout:auto;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>廠商名稱</th>
+                                                            <th>廠商地址</th>
+                                                            <th>廠商電話</th>
+                                                            <th>聯絡人姓名</th>
+                                                            <th>聯絡人頭銜</th>
+                                                            <th>聯絡人電話</th>
+                                                            <th>聯絡人信箱</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        
+                                                    </tbody>
+                                                </table>
+                
+                                                <div class="row text-center">
+                                                    <div class="col-md-12 text-center text-xs-center">
+                                                        <nav style="margin: auto;">
+                                                            <ul class="pagination justify-content-center" id="pagination_firm">
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div id="divTable_landlord" class="show_table" style="display: none;">
+                                                <table class="table" id="table_landlord" style="table-layout:auto;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>房東姓名</th>
+                                                            <th>房東性別</th>
+                                                            <th>房東棧點</th>
+                                                            <th>房東信箱</th>
+                                                            <th>房東住址</th>
+                                                            <th>房東手機</th>
+                                                            <th>房東電話</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        
+                                                    </tbody>
+                                                </table>
+                
+                                                <div class="row text-center">
+                                                    <div class="col-md-12 text-center text-xs-center">
+                                                        <nav style="margin: auto;">
+                                                            <ul class="pagination justify-content-center" id="pagination_landlord">
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div id="divTable_volunteer" class="show_table" style="display: none;">
+                                                <table class="table" id="table_volunteer" style="table-layout:auto;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>志工姓名</th>
+                                                            <th>志工性別</th>
+                                                            <th>志工信箱</th>
+                                                            <th>志工住址</th>
+                                                            <th>志工手機</th>
+                                                            <th>志工電話</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        
+                                                    </tbody>
+                                                </table>
+                
+                                                <div class="row text-center">
+                                                    <div class="col-md-12 text-center text-xs-center">
+                                                        <nav style="margin: auto;">
+                                                            <ul class="pagination justify-content-center" id="pagination_volunteer">
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+    
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/partners.js"></script>
+    <script src="javascripts/page/partners_referral.js"></script>
+    <script src="javascripts/page/partners_firm.js"></script>
+    <script src="javascripts/page/partners_landlord.js"></script>
+    <script src="javascripts/page/partners_volunteer.js"></script>
+  </body>
+
+</html>

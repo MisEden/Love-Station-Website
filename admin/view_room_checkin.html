@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入住回報</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/view_room_checkin.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>入住回報</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 border rounded">
+                    <form id="form1" class="form" data-toggle="validator" >
+                        <div class="form-row">
+                            <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;margin-top:  10px;">Step.1 前置檢查/確認項目</div>
+                            
+                            <div id="div_lock" class="form-group col-md-12">
+                                <label class="col-form-label title">電子鎖</label>
+                                <div class="col-content">
+                                    <input type="radio" id='lock_ok' name="lock" value="已完成" disabled><label for="lock_ok">正常</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='lock_no' name="lock" value="未完成" style="margin-top: 5px;" disabled><label for="lock_no">異常，因為：</label>
+                                        <input type="text" id="lock_reason" name="lock_reason" style="flex-grow: 1;" disabled>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">開啟總電源</label>
+                                <div class="col-content">
+                                    <input type="radio" id='power_ok' name="power" value="已完成" disabled><label for="power_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='power_no' name="power" value="未完成" style="margin-top: 5px;" disabled><label for="power_no">否，因為：</label>
+                                        <input type="text" id="power_reason" name="power_reason" style="flex-grow: 1;" disabled>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">閱讀入住須知</label>
+                                <div class="col-content">
+                                    <div style="display: flex; width:100%;">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id='convention_paper' name="convention[]" value="已完成" disabled>
+                                            <label class="form-check-label" for="convention_paper">紙本閱讀</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id='convention_online' name="convention[]" value="已完成" disabled>
+                                            <label class="form-check-label" for="convention_online">線上閱讀</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">簽署入住契約文件</label>
+                                <div class="col-content">
+                                    <input type="radio" id='contract' name="contract" value="已完成" disabled><label for="contract">已完成紙本簽署及上傳照片</label>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">通報保全</label>
+                                <div class="col-content">
+                                    <input type="radio" id='security_ok'name="security" value="已完成" disabled><label for="security_ok">已完成</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='security_no' name="security" value="未完成" style="margin-top: 5px;" disabled><label for="security_no">否，因為：</label> 
+                                        <input type="text" id="security_reason" name="security_reason" style="flex-grow: 1;" disabled>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div  id="div_heater" class="form-group col-md-12">
+                                <label class="col-form-label title">電熱水器使用須知</label>
+                                <div class="col-content">
+                                    <input type="radio" id='heater_ok' name="heater" value="已完成" disabled><label for="heater_ok">已閱讀</label>
+                                </div>
+                            </div>
+    
+                 
+    
+                            <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">Step.2 家具檢查 - 公共設備</div>
+                            <div id="public_furniture" >
+    
+                            </div>
+    
+                            <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">Step.3 家具檢查 - 房間設備</div>
+                            <div id="private_furniture" >
+    
+                            </div>
+                            
+    
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/view_room_checkin.js"></script>
+  </body>
+
+</html>

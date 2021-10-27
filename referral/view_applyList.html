@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檢視申請單</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="view_applyList.html" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        檢視申請單和審核結果
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="query_number.html">查詢轉介編號</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="rent.html">棧點入住申請</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="view_applyList.html">檢視申請單</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="view_change.html">檢視變更需求單</a>
+            </li>
+            <!-- <li>
+                    <a class="nav-link" href="javascript:clean()">登出</a>
+                </li> -->
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="wrapper">
+        <section class="main">
+            <div class="card apply">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <form id="form1">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label class="col-form-label">請輸入欲查詢之入住日期區間:</label>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="input_date_in" class="col-form-label addRedStar">開始日期</label>
+                                    <input type="date" class="form-control" id="date_first">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="input_date_out" class="col-form-label addRedStar">最後日期</label>
+                                    <input type="date" class="form-control" id="date_end">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label addRedStar">選擇棧點</label>
+                                    <select class="form-control" id="SelectHouse">
+                                        <option value="0">請選擇</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label">申請人</label>
+                                    <input class="form-control" type="text" placeholder="若需查詢請至少輸入一個字" id="people">
+                                    <input class="btn btn-outline-success" type="button" value="搜尋"
+                                        onclick="query_people()">
+                                    <select class="form-control" id="SelectPeople">
+                                        <option value="all">(全部)</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="form-group col-md-4 bottom">
+                                    <p></p>
+                                    <input type="button" class="btn btn-info" value="查詢" onclick="query()">
+                                </div>
+                            </div>
+                        </form>
+                        <div id="show_apply" style="margin-top:20px; display: none;">
+                            <table class="table" id="table1">
+                                <thead>
+                                    <tr>
+                                        <th>申請單號</th>
+                                        <th>入住棧點</th>
+                                        <th>入住日期</th>
+                                        <th>退房日期</th>
+                                        <th>申請民眾</th>
+                                        <th>審核結果</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content bottom">
+                                    <div class="modal-body" id="body">
+
+                                    </div>
+                                    <div class="modal-footer bottom">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/datepicker-zh-TW.js"></script>
+<script asnyc src="js/view_applyList.js"></script>
+<script src="js/url.js"></script>
+
+</html>

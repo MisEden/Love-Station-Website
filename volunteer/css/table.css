@@ -1,0 +1,33 @@
+#show_apply{
+	overflow: auto
+}
+.table{
+	width: 90%;
+	table-layout:fixed;
+    font-size: 15px;
+}
+.table th{
+	width: 120px;
+	height:20px;
+}
+.table td{
+	line-height: 24px;
+	word-wrap:break-word;
+	text-align: left;
+}
+.table tr{
+	transition: all 0.2s;
+}
+.table tr:hover{
+	background-color: #cccccc;
+}
+.table th{
+	background-color: #4287f5;
+	color: #fff;
+}
+
+.addRedStar:after {
+    content: '*';
+    color: red;
+    font-size: 16px;
+}

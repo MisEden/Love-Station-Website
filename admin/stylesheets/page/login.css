@@ -1,0 +1,50 @@
+/* login */
+html, body {
+    height: 100%;
+    background: url('../../images/login-background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container-fluid {
+    height: 100%;
+    display: table;
+    width: 100%;
+    padding: 0;
+}
+
+.row-fluid {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.centering {
+    float: none;
+    margin: 0 auto;
+}
+
+.header{
+    height: 10vh;
+    margin:0 auto;
+    display: block;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgb(255, 123, 0);
+    color:white;
+    font-size: x-large;
+    text-align: center;
+    line-height: 10vh;
+}
+
+
+.loginDiv{
+    border-radius: 10px 10px .25rem .25rem;
+}
+
+@media screen and (max-width: 991px) {
+    .loginDiv{
+        margin: 0px 20px;
+    }
+  }

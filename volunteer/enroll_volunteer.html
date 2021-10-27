@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>伊甸愛心棧</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/enroll.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="#" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt=""> 愛心志工註冊
+    </a>
+</nav>
+
+<body>
+    <div class="wrapper">
+        <section class="main">
+            <div class="card apply">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <form id="form1" data-toggle="validator" class="form">
+                            <div class="form-row">
+                                <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">帳號密碼
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="inputAccount">帳號</label>
+                                    <div>
+                                        <input class="form-control" type="text" id="inputAccount" pattern="^([a-zA-Z]+\d+)[a-zA-Z0-9]*$" maxlength="15" minlength="5" data-error="格式錯誤" required>
+                                        <small id="Account" class="form-text text-muted">5~15位英文字母、數字，第一個字需為英文，英文有區分大小寫，必須包含一個數字</small>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="inputPassword1">密碼</label>
+                                    <div>
+                                        <div class="input-group" id="show_hide_password">
+                                            <input data-toggle="password" class="form-control" type="password" id="inputPassword1" pattern="^([a-zA-Z]+\d+|\d+[a-zA-Z]+)[a-zA-Z0-9]*$" maxlength="15" minlength="8" data-error="格式錯誤" required>
+                                        </div>
+                                        <small id="Password1" class="form-text text-muted">8~15位英文字母、數字，英文有區分大小寫，必須包含一個數字</small>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="inputPassword2">確認密碼</label>
+                                    <div>
+                                        <input data-toggle="password" class="form-control" type="password" id="inputPassword2" data-match="#inputPassword1" data-match-error="密碼並未吻合，請重新輸入" required>
+                                        <small id="Password2" class="form-text text-muted ">需和密碼一致</small>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">基本資料
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-form-label" for="inputChName">中文姓名</label>
+                                    <div>
+                                        <input class="form-control" type="text" id="inputChName" data-error="此欄位為必填" maxlength="200" required>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-8">
+                                    <label class="col-form-label" for="inputEmail">電子信箱</label>
+                                    <div>
+                                        <input class="form-control" type="email" id="inputEmail" placeholder="name@example.com" maxlength="200" data-error="郵件格式錯誤" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="inputBirth">生日</label>
+                                    <div>
+                                        <input class="form-control" type="date" id="inputBirth" data-error="此欄位為必填" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-8">
+                                    <label class="col-form-label" for="inputId">身分證字號</label>
+                                    <div>
+                                        <input class="form-control" type="text" id="inputId" placeholder="英文字母請大寫" pattern="^[A-Z]\d{9}$" data-error="格式錯誤" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label class="col-form-label" for="inputSexual">性別</label>
+                                    <div>
+                                        <select class="form-control" id="inputSexual" required>
+                                            <option value="男">男</option>
+                                            <option value="女">女</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label class="col-form-label" for="inputAddress">通訊地址</label>
+                                    <div>
+                                        <div id="twzipcode">
+                                        </div>
+                                        <input class="form-control" type="text" id="inputAddress" placeholder="此欄為必填" data-error="此欄為必填" maxlength="190" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label class="col-form-label" for="inputPhone">行動電話</label>
+                                    <div>
+                                        <input class="form-control" type="text" id="inputPhone" placeholder="09xxxxxxxx" pattern="^(09)\d{2}\d{3}\d{3}$" data-error="格式錯誤" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <table class="w-100">
+                                        <tr>
+                                            <td>
+                                                <label class="col-form-label" for="inputZone">區碼</label>
+                                                <div>
+                                                    <input class="form-control" type="text" id="inputZone" placeholder="請輸入區碼" maxlength="5" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="col-form-label" for="inputTelephone">聯絡電話</label>
+                                                <div>
+                                                    <input class="form-control" type="text" id="inputTelephone" placeholder="請輸入電話" maxlength="20" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="col-form-label" for="inputExt">輸入分機</label>
+                                                <div>
+                                                    <input class="form-control" type="text" id="inputExt" placeholder="請輸入分機號碼" maxlength="20" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">註冊確認
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label" for="inputForget">忘記密碼救援提示</label>
+                                <div>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="日後忘記密碼時，會將新的密碼發送至註冊時所填寫的電子信箱" disabled></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="col-form-label" for="inputCode">請輸入驗證碼</label>
+                                <input class="form-control" type="text" id="inputCode" data-error="請輸入驗證碼" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <p></p>
+                                <div><canvas id="canvas" width="130" height="50"></canvas>
+                                    <label class="col-form-label" for="Code">點擊驗證碼可刷新驗證碼</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <h5 class="card-header">
+                                                個人資料蒐集、處理及利用告知暨同意書
+                                                <br><small>請閱讀下方條款後，勾選下方確認選項</small>
+                                            </h5>
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    <img class="w-100" src="img/註冊同意書-1.png">
+                                                    <img class="w-100" src="img/註冊同意書-2.png">
+                                                </p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="agree" value="1" data-error="請閱讀後勾選" required>
+                                                        <label class="form-check-label" for="inlineCheckbox1">我已閱讀且同意</label>
+                                                    </div>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content bottom">
+                                        <div class="modal-body" id="body">
+
+                                        </div>
+                                        <div class="modal-footer bottom">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__btn-group" style="margin: 0 auto; display: block;">
+                                <input type="button" class="btn btn-info" value="確認送出" onclick="enroll()" />
+
+                            </div>
+
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script async src="js/enroll_volunteer.js"></script>
+<script src="js/url.js"></script>
+<script src="js/jquery.media.js"></script>
+<script type="text/javascript" src="js/jquery.twzipcode.min.js"></script>
+<script type="text/javascript" src="js/jquery.twzipcode.js"></script>
+<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+<script>
+    $("#twzipcode").twzipcode({
+        countySel: "臺北市",
+        districtSel: "大安區",
+        "zipcodeIntoDistrict": true,
+        "css": ["city form-control col-md-3", "town form-control col-md-6"]
+    });
+</script>
+
+</html>

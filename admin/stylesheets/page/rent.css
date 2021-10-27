@@ -1,0 +1,52 @@
+#show_date{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin:0 auto; 
+    display:inline-block;
+}
+#show_date .ui-datepicker { 
+    padding: .2em .2em 0; 
+    display: block;
+    text-align:center;
+    font-size: 120%; 
+    margin: 0px auto;
+}
+.ui-datepicker-calendar a { 
+    font-size: 30px;
+    color: black !important; 
+    background-color: greenyellow !important; 
+}
+
+.ui-datepicker-calendar .ui-state-disabled span{
+    font-size: 30px;
+    color: black !important; 
+    background-color: rgb(160, 31, 31) !important; 
+}
+
+@media screen and (max-width: 460px) {
+    #show_date .ui-datepicker {
+        font-size: 100%;
+    }
+
+    .ui-datepicker-calendar a {
+        font-size: 14px;
+    }
+
+    .ui-datepicker-calendar .ui-state-disabled span{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 461px) {
+    #show_date .ui-datepicker { 
+        width: 400px; 
+    }
+}
+
+.enableColor{
+    color: greenyellow;
+}
+
+.disableColor{
+    color: rgb(160, 31, 31);
+}

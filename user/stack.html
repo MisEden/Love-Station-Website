@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>伊甸愛心棧</title>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/touch-icon-iphone-retina.png" />
+
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/stack.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/paver.min.css" />
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="index.html" style="color: white;">
+        <img src="img/logo.png" width="40" height="30" class="d-inline-block align-top" alt=""> 伊甸愛心棧
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    </div>
+</nav>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form>
+                <div class="form-group row">
+                    <label for="Select1" class="col-sm-3 col-form-label">選擇棧點</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="SelectHouse">
+    
+                        </select>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row" id="content1">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" id="images">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center; margin-top: 10px;">棧點介紹</div>
+
+                    <div id="introduction">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="content2">
+                <div class="col-12">
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">棧點位置</div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="table1">
+
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                    <td id="map"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">地址</th>
+                                    <td id="address"></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">鄰近醫院</th>
+                                    <td id="nearHospital"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">生活機能</th>
+                                    <td id="lifeFunction"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">附近交通</th>
+                                    <td id="traffic"></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">棧點資訊</div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">坪數</th>
+                                    <td id="squareFootage"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">格局</th>
+                                    <td id="roomLayout"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">樓層</th>
+                                    <td id="totalFloor"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">型態</th>
+                                    <td id="style"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">房間數</th>
+                                    <td id="roomDescription"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">特色說明</th>
+                                    <td id="feature"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">平面圖</th>
+                                    <td>
+                                        <img id="planimetricMap" width="250" height="250" alt="系統建置中">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-nowrap">360度影像</th>
+                                    <td style="overflow-x: auto; max-height: 400px;">
+                                        <!-- <img id="img_fullDegreePanorama" width="250" height="250" alt="系統建置中">
+                                        <div id="show_iframe">
+                                            <iframe width="300" height="250" allowfullscreen style="border-style:none;" id="iframe_fullDegreePanorama"></iframe>
+                                        </div> -->
+
+                                        <img id="img_fullDegreePanorama" style="max-width: 800px;">
+
+
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script asnyc src="js/stack.js"></script>
+<script src="js/url.js"></script>
+
+
+<script type="text/javascript" src="js/jquery.paver.min.js"></script>
+<script>
+    $(function() {
+        // Paver
+        $('div[data-paver]').paver();
+    });
+</script>
+
+</html>

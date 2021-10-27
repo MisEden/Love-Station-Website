@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公共家具管理</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/furniture_public_manage.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>公共家具管理</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4><i class="fas fa-chair"></i>「公共家具」管理列表</h4>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="card-660746">
+                                <div id="insertDiv" class="card">
+                                    <div class="card-header">
+                                         <a class="card-link" data-toggle="collapse" data-parent="#card-660746" href="#card-element-883915">▼ 家具新增</a>
+                                    </div>
+                                    <div id="card-element-883915" class="collapse">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-6 text-center">
+                                                    <h4>公共家具新增</h4>
+                                                    <div class="row" style="text-align: left;">
+                                                        <div class="form-group col-md-12" style="max-width: 90%; margin: 30px auto;">
+                                                            <label class="col-form-label" for="furnitureName">家具名稱</label>
+                                                            <input class="form-control" id="furnitureName" type="text" placeholder="冷風扇(含遙控器)">
+                                                        </div>
+                                                        <div class="col-md-12 text-center">
+                                                            <input class="btn btn-success btn-lg btn-block" type="button" onclick="insert();" style="max-width: 90%; margin: 30px auto;" value="新增">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="editDiv" class="card">
+                                    <div class="card-header">
+                                         <a class="collapsed card-link" data-toggle="collapse" data-parent="#card-660746" href="#card-element-126648">▼ 家具順序變更</a>
+                                    </div>
+                                    <div id="card-element-126648" class="collapse">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-6 text-center">
+                                                    <h4>公共家具順序變更</h4>
+                                                    <div class="row" style="text-align: left;">
+                                                        <div class="form-group col-md-12" style="max-width: 90%; margin: 30px auto;">
+                                                            <label class="col-form-label" for="select_changeA">家具Ａ</label>
+                                                            <select class="form-control" id="select_changeA" onchange="changedSelect();">
+                                                            </select>
+
+                                                            <label class="col-form-label" for="select_changeB">家具Ｂ</label>
+                                                            <select class="form-control" id="select_changeB" onchange="changedSelect();">
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-12 text-center">
+                                                            <small class="form-text text-muted">將 家具Ａ-「<span id="smallText_furnitureA"></span>」與 家具Ｂ-「<span id="smallText_furnitureB"></span>」的排列順序交換</small>
+                                                            <input class="btn btn-success btn-lg btn-block" type="button" onclick="changeSerial();" style="max-width: 90%; margin: 30px auto;" value="交換">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                         <a class="card-link" data-toggle="collapse" data-parent="#card-660746" href="#card-element-883917">▼ 家具清單</a>
+                                    </div>
+                                    <div id="card-element-883917" class="collapse show">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-12 text-center">
+                                                    <div class="show_table" style="overflow-x: auto;">
+                                                        <table class="table" id="table_publicFurniture">
+                                                            <thead class="thead-primary">
+                                                                <tr>
+                                                                    <th>序號</th>
+                                                                    <th>家具名稱</th>
+                                                                    <th>操作</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="tbody-primary">
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/furniture_public_manage.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>退房回報</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/view_room_checkin.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>退房回報</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 border rounded">
+                    <form id="form1" class="form" data-toggle="validator" >
+                        <div class="form-row">
+                            <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;margin-top:  10px;">Step.1 前置檢查/確認項目</div>
+                            
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">寢具</label>
+                                <div class="col-content">
+                                    <div class="col-content">
+                                        <input type="radio" id='bedding_ok' name="bedding" value="已完成" disabled><label for="bedding_ok">是</label>
+                                        <div style="display: flex; width:100%;">
+                                            <input type="radio" id='bedding_no' name="bedding" value="未完成" style="margin-top: 5px;" disabled><label for="bedding_no">否，因為：</label>
+                                            <input type="text" id="bedding_reason" name="bedding_reason" style="flex-grow: 1;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">衛浴</label>
+                                <div class="col-content">
+                                    <div class="col-content">
+                                        <input type="radio" id='shower_ok' name="shower" value="已完成" disabled><label for="shower_ok">是</label>
+                                        <div style="display: flex; width:100%;">
+                                            <input type="radio" id='shower_no' name="shower" value="未完成" style="margin-top: 5px;" disabled><label for="shower_no">否，因為：</label>
+                                            <input type="text" id="shower_reason" name="shower_reason" style="flex-grow: 1;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">冰箱</label>
+                                <div class="col-content">
+                                    <div class="col-content">
+                                        <input type="radio" id='fri_ok' name="fri" value="已完成" disabled><label for="fri_ok">是</label>
+                                        <div style="display: flex; width:100%;">
+                                            <input type="radio" id='fri_no' name="fri" value="未完成" style="margin-top: 5px;" disabled><label for="fri_no">否，因為：</label>
+                                            <input type="text" id="fri_reason" name="fri_reason" style="flex-grow: 1;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">私人物品</label>
+                                <div class="col-content">
+                                    <div class="col-content">
+                                        <input type="radio" id='personal_stuff_ok' name="personal_stuff" value="已完成" disabled><label for="personal_stuff_ok">是</label>
+                                        <div style="display: flex; width:100%;">
+                                            <input type="radio" id='personal_stuff_no' name="personal_stuff" value="未完成" style="margin-top: 5px;" disabled><label for="personal_stuff_no">否，因為：</label>
+                                            <input type="text" id="personal_stuff_reason" name="personal_stuff_reason" style="flex-grow: 1;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">垃圾</label>
+                                <div class="col-content">
+                                    <div class="col-content">
+                                        <input type="radio" id='garbage_ok' name="garbage" value="已完成" disabled><label for="garbage_ok">是</label>
+                                        <div style="display: flex; width:100%;">
+                                            <input type="radio" id='garbage_no' name="garbage" value="未完成" style="margin-top: 5px;" disabled><label for="garbage_no">否，因為：</label>
+                                            <input type="text" id="garbage_reason" name="garbage_reason" style="flex-grow: 1;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">門窗/電源</label>
+                                <div class="col-content">
+                                    <div class="col-content">
+                                        <input type="radio" id='door_ok' name="door" value="已完成" disabled><label for="door_ok">是</label>
+                                        <div style="display: flex; width:100%;">
+                                            <input type="radio" id='door_no' name="door" value="未完成" style="margin-top: 5px;" disabled><label for="door_no">否，因為：</label>
+                                            <input type="text" id="door_reason" name="door_reason" style="flex-grow: 1;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">通報保全</label>
+                                <div class="col-content">
+                                    <div class="col-content">
+                                        <input type="radio" id='security_ok' name="security" value="已完成" disabled><label for="security_ok">是</label>
+                                        <div style="display: flex; width:100%;">
+                                            <input type="radio" id='security_no' name="security" value="未完成" style="margin-top: 5px;" disabled><label for="security_no">否，因為：</label>
+                                            <input type="text" id="security_reason" name="security_reason" style="flex-grow: 1;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">繳回入住文件</label>
+                                <div class="col-content">
+                                    <div class="col-content">
+                                        <input type="radio" id='return_file_ok' name="return_file" value="已完成" disabled><label for="return_file_ok">是</label>
+                                        <div style="display: flex; width:100%;">
+                                            <input type="radio" id='return_file_no' name="return_file" value="未完成" style="margin-top: 5px;" disabled><label for="return_file_no">否，因為：</label>
+                                            <input type="text" id="return_file_reason" name="return_file_reason" style="flex-grow: 1;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label title">交還鑰匙</label>
+                                <div class="col-content">
+                                    <div class="col-content">
+                                        <input type="radio" id='return_key_ok' name="return_key" value="已完成" disabled><label for="return_key_ok">是</label>
+                                        <div style="display: flex; width:100%;">
+                                            <input type="radio" id='return_key_no' name="return_key" value="未完成" style="margin-top: 5px;" disabled><label for="return_key_no">否，因為：</label>
+                                            <input type="text" id="return_key_reason" name="return_key_reason" style="flex-grow: 1;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/view_room_checkout.js"></script>
+  </body>
+
+</html>

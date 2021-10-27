@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>志工回報服務紀錄</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">
+
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="view_applyList.html" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        伊甸愛心棧
+    </a>
+</nav>
+
+<body>
+    <div class="wrapper">
+        <section class="main">
+            <div class="card apply">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <form id="form1">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+
+                                    <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content bottom">
+                                                <div class="modal-body" id="body">
+
+                                                </div>
+                                                <div class="modal-footer bottom">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">關閉</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="Place">棧點</label>
+                                                <input type="text" class="form-control" id="Place" disabled>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="RoomNumber">房號</label>
+                                                <input type="text" class="form-control" id="RoomNumber" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6 mb-6">
+                                                <label for="Service">服務項目</label>
+                                                <input type="text" class="form-control is-invalid" id="Service"
+                                                    maxlength="10" placeholder="請輸入服務項目(最多10個字)" required>
+                                                <div class="invalid-feedback">
+                                                    請輸入服務事項
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="Remark">備註項目</label>
+                                                <input type="text" class="form-control" id="Remark" maxlength="10"
+                                                    placeholder="請輸入備註事項(最多10個字)">
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                    <div class="form-group col-md-12 bottom text-align:center">
+                        <input type="button" class="btn btn-outline-success" style="width:100%;" value="送出"
+                            onclick="submit_volunteer()" />
+                    </div>
+                </div>
+                </form>
+                <!-- <input type="button" class="btn btn-info" value="查詢" onclick="test()"> -->
+            </div>
+
+    </div>
+    </div>
+    </section>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="js/jquery.media.js"></script>
+<script asnyc src="js/report.js"></script>
+<script src="js/url.js"></script>
+
+</html>

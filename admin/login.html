@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>愛心棧後台管理</title>
+        <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+        <!-- CSS file -->
+        <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">   
+        <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+        <link rel='stylesheet' href='stylesheets/page/login.css' />
+        <style>
+            i{
+                margin: 0px !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container container-fluid">
+            <div class="row row-fluid">
+                <div class="centering">
+                    <div style="margin: auto; max-width: 400px;">
+                        <div class="bg-white loginDiv">
+                            <div class="header">
+                                愛心棧管理人員登入
+                            </div>
+    
+                            <form class="form pt-4 pl-5 pr-5">
+                                <div class="form-group">
+                                    <label class="form-label">帳號</label>
+                                    <input type="text" class="form-control form-control-lg" id="inputAccount" placeholder="請輸入帳號" required/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">密碼</label>
+                                    <input data-toggle="password" type="password" class="form-control form-control-lg" id="inputPassword" placeholder="請輸入密碼" required onkeypress="runScript(event);"/>
+                                    <a class="w-100 text-left" href="https://liff.line.me/1655081006-V46AYdDE">忘記密碼?</a>
+                                </div>
+                                <div class="form-group text-center">
+                                    <input type="button" class="btn btn-info btn-lg px-5" value="登入" onclick="WebLogIn()" style="border-radius: 30px;">
+                                </div>
+                            </form>
+
+                            <hr class="mt-4">
+
+                            <div class="row pt-1 pb-3">
+                                <div class="col-12 text-center">
+                                    需要管理權限嗎？<a href="enroll_admin.html">註冊管理員帳戶</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/page/login.js"></script>
+    </body>
+</html>

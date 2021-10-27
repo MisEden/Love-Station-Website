@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>棧點使用狀態</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+    <link rel='stylesheet' href='stylesheets/page/rent.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>棧點使用狀態</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 p-3 border rounded">
+                    <form id="form1">
+                        <h4 class="mb-4"><i class="fas fa-search"></i>查詢條件</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label">選擇棧點<small class="ml-1 text-danger">(必填)</small></label>
+                                <select class="form-control" id="SelectHouse">
+                                    <option value="0">請選擇</option>
+                                    <!-- <option>台北南海棧-南海路郭伯伯之家</option> -->
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label class="col-form-label">房號<small class="ml-1 text-danger">(必填)</small></label>
+                                <select class="form-control" id="SelectRoom">
+                                    <!-- <option>77-1號</option> -->
+                                </select>
+                            </div>
+                            <div class="col-md-12 mt-5">
+                                <input type="button" class="btn btn-info w-100" value="查詢" onclick="query()">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div id="show_date_note" class="text-center" style="display: none;">
+                        <h5>預約狀態說明</h5>
+                        <hr style="max-width: 90px;">
+                        <i class="fas fa-hand-point-right enableColor"></i>綠色表示：當日為「無預約」之日期<br />
+                        <i class="fas fa-hand-point-right disableColor"></i>紅色表示：當日為「已有預約」之日期
+                    </div>
+                    <div id="show_date" class="w-100">
+                        
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascripts/datepicker-zh-TW.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/rent.js"></script>
+  </body>
+
+</html>

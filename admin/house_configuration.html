@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>棧點影圖管理</title>
+    <link rel="shortcut icon" href="images/favicon/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/touch-icon-iphone-retina.png" />
+
+    <!-- CSS file -->
+    <link href="stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' href='stylesheets/commonStyle.css' />
+  </head>
+
+
+  <body>
+
+    <nav id="websiteNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top pl-4 pr-lg-5"></nav>
+
+    <div class="container-fluid">
+        <div id="breadcrumbRow" class="row breadcrumbRow">
+            <div id="breadcrumbDiv" class="col-md-12">
+                <h3 class="heading"><i class="fas fa-home"></i>棧點影圖管理</h3>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 id="houseName" class="w-100 text-center"></h4>
+                            <div id="card-11046">
+                                <div class="card">
+                                    <div class="card-header">
+                                         <a class="card-link" data-toggle="collapse" data-parent="#card-11046" href="#card-element-152923">▼ 平面圖</a>
+                                    </div>
+                                    <div id="card-element-152923" class="collapse show">
+                                        <div class="card-body text-center">
+                                            <div id="alert_planimetricMap" class="alert alert-warning alert-dismissable text-left">
+                                                <h4><b><u>無圖片</u></b></h4> 
+                                                <strong class="ml-3">無上傳圖片</strong>
+                                            </div>
+
+                                            <a id="link_planimetricMap" href="" target="_blank">
+                                                <img id="img_planimetricMap" src="" alt="" class="w-50">
+                                            </a>
+                                            <div id="planimetricMap_delete" style="margin-top: 20px;">
+                                                <input type="button" class="btn btn-danger col-md-12" value="刪除" onClick="deletePlanimetricMap();">
+                                            </div>
+                                            <div id="planimetricMap_upload" style="margin-top: 20px;">
+                                                <form id="form1" data-toggle="validator" class="form" enctype="multipart/form-data" method="POST">
+                                                    <div class="form-group col-md-12 mt-5">
+                                                        <input type="file" id="file-uploader1" class="w-100" name="planimetricMap" data-target="file-uploader" accept=".heic, .hevc, .heif, .pdf, .png, .gif, .jpg, .jpeg" />
+                                                        <div id="image" class="bottom"></div>
+                                                    </div>
+                
+                                                    <div class="col-md-12 bottom">
+                                                        <input id="btn_send_planimetricMap" type="button" class="btn btn-success btn-block btn-lg" value="上傳" onclick="savePlanimetricMap();">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                         <a class="collapsed card-link" data-toggle="collapse" data-parent="#card-11046" href="#card-element-475221">▼ 360度影像</a>
+                                    </div>
+                                    <div id="card-element-475221" class="collapse show">
+                                        <div class="card-body text-center">
+                                            <div id="alert_fullDegreePanorama" class="alert alert-warning alert-dismissable text-left">
+                                                <h4><b><u>無圖片</u></b></h4> 
+                                                <strong class="ml-3">無上傳圖片</strong>
+                                            </div>
+                                            <div id="link_fullDegreePanorama">
+                                                <div id="show_iframe">
+                                                    <iframe width="100%" allowfullscreen style="border-style:none;" id="iframe_fullDegreePanorama"></iframe>
+                                                </div>
+                                                <div id="fullDegreePanorama_delete" style="margin-top: 20px;">
+                                                    <input type="button" class="btn btn-danger col-md-12" value="刪除" onClick="deleteFullDegreePanorama();">
+                                                </div>
+                                                <div id="fullDegreePanorama_upload" style="margin-top: 20px;">
+                                                    <form id="form2" data-toggle="validator" class="form" enctype="multipart/form-data" method="POST">
+                                                        <div class="form-group col-md-12 mt-5">
+                                                            <input type="file" id="file-uploader2" class="w-100" name="fullDegreePanorama" data-target="file-uploader" accept=".heic, .hevc, .heif, .pdf, .png, .gif, .jpg, .jpeg" />
+                                                            <div id="image" class="bottom"></div>
+                                                        </div>
+                    
+                                                        <div class="col-md-12 bottom">
+                                                            <input id="btn_send_fullDegreePanorama" type="button" class="btn btn-success btn-block btn-lg" value="上傳" onclick="saveFullDegreePanorama();">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="websiteFooter" class="bg-light text-center text-lg-start fixed-bottom"></footer>
+    
+
+    <!-- JS file -->
+    <script src="javascripts/bootstrap/jquery.min.js"></script>
+    <script src="javascripts/bootstrap/bootstrap.min.js"></script>
+    <script src="javascripts/bootstrap/jquery.media.js"></script>
+
+    <script src="javascripts/url.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/page/house_configuration.js"></script>
+  </body>
+
+</html>

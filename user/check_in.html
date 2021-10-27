@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>入住程序確認</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/check.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .img_des {
+            margin: 15px;
+        }
+        
+        .title {
+            margin-top: 20px;
+        }
+        
+        input[type="radio"] {
+            margin-left: 1.25rem;
+            margin-right: 0.25rem;
+        }
+        
+        .form-check-input {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+            margin-top: 0px;
+            position: inherit;
+        }
+        
+        .div_item {
+            padding: 10px 0px 10px 0px;
+            border-bottom: 0.5px solid #e0e0e0;
+        }
+        
+        input[type='text'] {
+            margin-right: 0px;
+        }
+    </style>
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="check_in.html" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt=""> 入住程序確認
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="applyList.html">檢視入住申請紀錄</a>
+            </li>
+            <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">進行入住確認程序</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="check_out.html">進行退房確認程序</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="javascript:clean()">登出</a>
+                </li> -->
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="form-group col-md-8">
+                <label class="col-form-label">您今日入住的棧點為</label>
+                <select class="form-control" id="SelectHouse" disabled>
+                        <option value="0">請選擇</option>
+                    </select>
+            </div>
+
+
+
+            <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content bottom">
+                        <div class="modal-body" id="body">
+
+                        </div>
+                        <div class="modal-footer bottom">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="form1" class="form" data-toggle="validator" style="display: none;">
+                <div class="form-row">
+
+                    <div class="form-group col-md-12">
+                        <ol>
+                            <li id="div_lock" style="display: none;">
+                                <label class="col-form-label title">電子鎖</label>
+                                <div>
+                                    <p>確認電子鎖功能是否正常。</p>
+                                    <input type="radio" id='lock_ok' name="lock" value="已完成"><label for="lock_ok">正常</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='lock_no' name="lock" value="未完成" style="margin-top: 5px;"><label for="lock_no">異常，因為：</label>
+                                        <input type="text" id="lock_reason" name="lock_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">開啟總電源</label>
+                                <div>
+                                    <p>確認總電源是否開啟。</p>
+                                    <input type="radio" id='power_ok' name="power" value="已完成"><label for="power_ok">是</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='power_no' name="power" value="未完成" style="margin-top: 5px;"><label for="power_no">否，因為：</label>
+                                        <input type="text" id="power_reason" name="power_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="col-form-label title">閱讀入住須知</label>
+                                <div>
+                                    <p>(1) 愛心棧作業要點<br>(2) 愛心棧入住暨退房須知<br>(3) 生活公約</p>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id='convention_paper' name="convention[]" value="已完成">
+                                        <label class="form-check-label" for="convention_paper">紙本閱讀</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id='convention_online' name="convention[]" value="已完成">
+                                        <label class="form-check-label" for="convention_online">線上閱讀</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="col-form-label title">簽署入住契約文件</label>
+                                <div>
+                                    <p>(1) 切結書<br>(2)入住契約書<br>● 自助入住者，請退房時將紙本契約文件投至指定實體信箱。</p>
+                                    <input type="radio" id='contract' name="contract" value="已完成"><label for="contract">已完成紙本簽署及上傳照片</label>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="col-form-label title">通報保全</label>
+                                <div>
+                                    <p>請確實通報中興保全24小時緊急救援通報系統，告知入住。</p>
+                                    <p>步驟(1)：按壓通報系統方型紅色鈕約3秒（請參見圖示），聽到嗶一聲後放開，等候連線(通報連線中請稍候)。</p>
+                                    <p>步驟(2)：連線後告知「姓名」及「入住房號」。</p>
+                                    <img class="img_des" src="./img/emergy1.jpg" width="300px"><br>
+                                    <img class="img_des" src="./img/emergy2.jpg" width="300px"><br>
+
+                                    <input type="radio" id='security_ok' name="security" value="已完成"><label for="security_ok">已完成</label>
+                                    <div style="display: flex; width:100%;">
+                                        <input type="radio" id='security_no' name="security" value="未完成" style="margin-top: 5px;"><label for="security_no">否，因為：</label>
+                                        <input type="text" id="security_reason" name="security_reason" style="flex-grow: 1;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li id="div_heater" style="display: none;">
+                                <label class="col-form-label title">電熱水器使用須知</label>
+                                <div>
+                                    <p>(1)使用前15分鐘開啟儲熱。<br> (2)使用後務必關閉總電源，以免熱水器持續運作，發生危險。
+                                    </p>
+
+                                    <input type="radio" id='heater_ok' name="heater" value="已完成"><label for="heater_ok">已閱讀</label>
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="col-form-label title">衛浴、寢具、垃圾回收、衣物</label>
+                                <div>
+                                    <div class="div_item">
+                                        <label class="col-form-label">衛浴</label>
+                                        <p>每次使用後請保持乾淨，垃圾桶請自行套入垃圾袋。</p>
+                                        <div class="form-check">
+                                            <input type="radio" id='shower' name="read6" value="online">
+                                            <label for="shower">已確認</label>
+                                        </div>
+                                    </div>
+                                    <div class="div_item">
+                                        <label class="col-form-label">寢具</label>
+                                        <p>衣櫃內有乾淨寢具(床被單、枕頭套)，可自行替換。</p>
+                                        <div class="form-check">
+                                            <input type="radio" id='bed' name="read5" value="online">
+                                            <label for="bed">已確認</label>
+                                        </div>
+                                    </div>
+                                    <div class="div_item">
+                                        <label class="col-form-label">垃圾回收</label>
+                                        <p>垃圾及資源回收物放置地點：</p>
+                                        <p>*台北海南棧：垃圾車固定時間收取。</p>
+                                        <p>*新北淡水棧：社區內備有大型垃圾箱(一樓車道口)及資源回收室(B1)。</p>
+                                        <p>*台中雙十棧：大樓內備有一般垃圾桶及資源回收桶(B1)。</p>
+                                        <p>*高雄鹽埕棧：大樓內備有一般垃圾桶及資源回收桶(5樓梯間)。</p>
+                                        <div class="form-check">
+                                            <input type="radio" id='gar' name="read3" value="online">
+                                            <label for="gar">已確認</label>
+                                        </div>
+                                    </div>
+                                    <div style="padding-top: 10px;">
+                                        <label class="col-form-label">衣物清洗</label>
+                                        <p>衣物清洗地點：</p>
+                                        <p>*室內公共空間配置洗衣機，可自行清洗。</p>
+                                        <p>*新北淡水棧：社區備有投幣式洗衣間，可自行清洗</p>
+                                        <p>*台中雙十棧：室內公共空間配置洗衣機，可自行清洗。</p>
+                                        <p>*高雄鹽埕棧： 大樓一樓備有投幣式洗衣間，可自行清洗。</p>
+                                        <div class="form-check">
+                                            <input type="radio" id='clean' name="read4" value="online">
+                                            <label for="clean">已確認</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <div id="public_for">
+                                <li>
+                                    <label class="col-form-label title">檢查公共設備之電器設備</label>
+
+                                </li>
+                            </div>
+                            <div id='private_for'>
+                                <li>
+                                    <label class="col-form-label title">檢查房間內之電器設備</label>
+                                </li>
+                            </div>
+                        </ol>
+                    </div>
+                    <div class="col-md-12 bottom">
+                        <div>
+                            <input class="form-check-input" type="checkbox" id='check_onlyOneChance' name="check_onlyOneChance">
+                            <label class="form-check-label" for="check_onlyOneChance">我知道送出後即不可修改(*)</label>
+                        </div>
+                        <!-- <input type="button" class="btn btn-dark" value="全部勾選" id="first2" onclick="checkAll()"> -->
+                        <input type="button" class="btn btn-dark" value="送出結果" id="first1" onclick="validate()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script asnyc src="js/check_in.js"></script>
+<script src="js/url.js"></script>
+
+</html>

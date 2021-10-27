@@ -1,0 +1,71 @@
+#show_date {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#show_date .ui-datepicker {
+  padding: .2em .2em 0;
+  display: block;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.ui-datepicker-calendar a {
+  color: black !important;
+  background-color: rgb(14, 219, 117) !important;
+}
+
+.ui-datepicker-calendar .ui-state-disabled span {
+  color: black !important;
+  background-color: rgb(223, 19, 19) !important;
+}
+
+
+.center{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.ring
+{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /*box-shadow:1px 5px 2px #ff002e;*/
+  background: transparent;
+  animation: ani 2s linear infinite;
+}
+.text
+{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color:rgb(37, 10, 10);
+  position: absolute;
+  text-align: center;
+  line-height: 100px;
+  top:0;
+  left: 0;
+  font-size:1em;
+  background: transparent;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+@keyframes ani {
+  0%{
+    transform: rotate(0deg);
+    box-shadow:1px 5px 2px #ff002e;
+  }
+
+  50%{
+    transform: rotate(180deg);
+    box-shadow:1px 5px 2px #18a401;
+  }
+  100%{
+    transform: rotate(360deg);
+    box-shadow:1px 5px 2px #033e8e;
+  }
+
+}

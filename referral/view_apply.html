@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>檢視入住申請單</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="view_applyList.html" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        檢視入住申請單
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="query_number.html">查詢轉介編號</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="rent.html">棧點入住申請</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="view_applyList.html">檢視申請單</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="view_change.html">檢視變更需求單</a>
+            </li>
+            <!-- <li>
+                    <a class="nav-link" href="javascript:clean()">登出</a>
+                </li> -->
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <form id="form1" class="form" data-toggle="validator">
+                <div class="form-row">
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">轉介單位資料</div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="ReferralDate">轉介日期</label>
+                        <input type="text" class="form-control" id="ReferralDate" disabled>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="ReferralHospital">轉介醫院</label>
+                        <input type="text" class="form-control" id="ReferralHospital" disabled>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ReferralName">轉介人員姓名</label>
+                        <input type="text" class="form-control" id="ReferralName" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ReferralTitle">轉介人員職稱</label>
+                        <input type="text" class="form-control" id="ReferralTitle" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ReferralPhone">轉介人員電話</label>
+                        <input type="text" class="form-control" id="ReferralPhone" disabled>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">申請入住者基本資料</div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="applyID">申請單編號:</label>
+                        <input type="text" class="form-control" id="applyID" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputID">申請人身分證字號</label>
+                        <input type="text" class="form-control" id="inputID" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputName">申請人姓名</label>
+                        <input type="text" class="form-control" id="inputName" disabled>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputBirth">出生年月日</label>
+                        <input type="text" class="form-control" id="inputBirth" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label">性別</label>
+                        <input type="text" class="form-control" id="inputSexual" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputBlo">血型</label>
+                        <input type="text" class="form-control" id="inputBlo" disabled>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputAddress">通訊地址</label>
+                        <input type="text" class="form-control" id="inputAddress" disabled>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="inputPhone">連絡電話</label>
+                        <input type="text" class="form-control" id="inputPhone" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label">本次是否入住</label>
+                        <input type="text" class="form-control" id="inputInOut" disabled>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">病歷資料</div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputLan">慣用語言</label>
+                        <textarea class="form-control" rows="2" id="inputLan" disabled></textarea>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputSick">特殊病史</label>
+                        <textarea class="form-control" rows="2" id="inputSick" disabled></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputSenDrug">過敏藥物</label>
+                        <textarea class="form-control" rows="2" id="inputSenDrug" disabled></textarea>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputDigName">診斷名稱</label>
+                        <textarea class="form-control" rows="2" id="inputDigName" disabled></textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputDigDet">病況概述</label>
+                        <textarea class="form-control" rows="3" id="inputDigDet" disabled></textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputDrug">目前用藥</label>
+                        <textarea class="form-control" rows="2" id="inputDrug" disabled></textarea>
+                    </div>
+
+
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputType">身分別</label>
+                        <textarea class="form-control" rows="2" id="inputType" disabled></textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputAbility">自理能力</label>
+                        <input class="form-control" type="text" id="inputAbility" disabled>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputTool">輔具使用</label>
+                        <textarea class="form-control" rows="2" id="inputTool" disabled></textarea>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">照顧者資料</div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="CareName">照顧者姓名</label>
+                        <input type="text" class="form-control" id="CareName" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="CareRelate">與申請人關係</label>
+                        <input type="text" class="form-control" id="CareRelate" disabled>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="CarePhone">照顧者連絡電話</label>
+                        <input type="tel" class="form-control" id="CarePhone" disabled>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">傳染性疾病</div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputConSick">申請人是否有傳染疾病</label>
+                        <input type="tel" class="form-control" id="inputConSick" disabled>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="CareConSick">照顧者是否有傳染疾病</label>
+                        <input type="tel" class="form-control" id="CareConSick" disabled>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-info text-white" style="text-align: center;">緊急聯絡人資料</div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactName1">第一聯絡人姓名</label>
+                        <input type="text" class="form-control" id="ContactName1" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactRelate1">與申請人關係</label>
+                        <input type="text" class="form-control" id="ContactRelate1" disabled>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactPhone1">連絡電話</label>
+                        <input type="tel" class="form-control" id="ContactPhone1" disabled>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactName2">第二聯絡人姓名</label>
+                        <input type="text" class="form-control" id="ContactName2" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactRelate2">與申請人關係</label>
+                        <input type="text" class="form-control" id="ContactRelate2" disabled>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="col-form-label" for="ContactPhone2">連絡電話</label>
+                        <input type="tel" class="form-control" id="ContactPhone2" disabled>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-warning" style="text-align: center; color: red;">申請內容</div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputStack">申請棧點</label>
+                        <input type="text" class="form-control" id="inputStack1" disabled>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputStack">棧點房號</label>
+                        <input type="text" class="form-control" id="inputStack2" disabled>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputDayIn">入住日期</label>
+                        <input type="text" class="form-control" id="inputDayIn" disabled>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-form-label" for="inputDayOut">退房日期</label>
+                        <input type="text" class="form-control" id="inputDayOut" disabled>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="inputReason">申請原因</label>
+                        <textarea class="form-control" rows="5" id="inputReasonOt" disabled></textarea>
+                    </div>
+
+                    <div class="col-md-12 p-2 mb-2 bg-warning" style="text-align: center; color: red;">審核結果</div>
+
+                    <div class="form-group col-md-12">
+                        <textarea class="form-control" rows="5" id="inputResult" disabled></textarea>
+                    </div>
+
+                    <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content bottom">
+                                <div class="modal-body" id="body">
+
+                                </div>
+                                <div class="modal-footer bottom">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script type="text/javascript" src="js/jquery.twzipcode.min.js"></script>
+<script type="text/javascript" src="js/jquery.twzipcode.js"></script>
+<script asnyc src="js/view_apply.js"></script>
+<script src="js/url.js"></script>
+
+</html>

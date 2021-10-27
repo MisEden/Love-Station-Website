@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廠商清潔回報</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">
+
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #FE7019;">
+    <a class="navbar-brand" href="view_applyList.html" style="color: white;">
+        <img src="img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        伊甸愛心棧
+    </a>
+</nav>
+
+<body>
+    <div class="wrapper">
+        <section class="main">
+            <div class="card apply">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <form id="form1">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+
+                                    <div class="modal fade" id="mymodal-link" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content bottom">
+                                                <div class="modal-body" id="body">
+
+                                                </div>
+                                                <div class="modal-footer bottom">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">關閉</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="WorkNumber">施作編號</label>
+                                            <input type="text" class="form-control" id="WorkNumber" disabled>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="WorkDate">施作日期</label>
+                                                <input type="email" class="form-control" id="WorkDate" disabled>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="CompanyName">單位名稱</label>
+                                                <input type="text" class="form-control" id="CompanyName" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label for="WorkerName">施作人員</label>
+                                                <input type="email" class="form-control" id="WorkerName" disabled>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="WorkPlace">施作棧點</label>
+                                                <input type="text" class="form-control" id="WorkPlace" disabled>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="WorkRoomNumber">施作房號</label>
+                                                <input type="text" class="form-control" id="WorkRoomNumber" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <h3>請選擇服務內容(可複選)</h3>
+                                            <div class="form-check form-check-online">
+                                                <input class="form-check-input" type="checkbox" value="床被單清洗烘乾"
+                                                    name="service" id="service1">
+                                                <label class="form-check-label" for="inlineCheckbox1"></label>床被單清洗烘乾
+                                            </div>
+                                            <div class="form-check form-check-online">
+                                                <input class="form-check-input" type="checkbox" value="浴室清潔維護"
+                                                    name="service" id="service2">
+                                                <label class="form-check-label" for="inlineCheckbox2"></label>浴室清潔維護
+                                            </div>
+                                            <div class="form-check form-check-online">
+                                                <input class="form-check-input" type="checkbox" value="垃圾清運"
+                                                    name="service" id="service3">
+                                                <label class="form-check-label" for="inlineCheckbox3"></label>垃圾清運
+                                            </div>
+                                            <div class="form-check form-check-online">
+                                                <input class="form-check-input" type="checkbox" value="全室消毒"
+                                                    name="service" id="service4">
+                                                <label class="form-check-label" for="inlineCheckbox3"></label>全室消毒
+                                            </div>
+                                        </div>
+                                        <h5>清潔前照片上傳</h5>
+                                        <div class="custom-file" id='pic1'>
+                                            <input type="file" class="custom-file-input" id="file-uploader1"
+                                                accept="image/*" required>
+                                            <label class="custom-file-label" for="customFile">選擇照片</label>
+                                        </div>
+                                        <h5>清潔後照片上傳</h5>
+                                        <div class="custom-file" id='pic2'>
+                                            <input type="file" class="custom-file-input" id="file-uploader2"
+                                                accept="image/*" required>
+                                            <label class="custom-file-label" for="customFile">選擇照片</label>
+                                        </div>
+
+
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="form-group col-md-12 bottom text-align:center">
+                        <input type="button" class="btn btn-outline-success" style="width:100%;" value="送出"
+                            onclick="submit_firm()" />
+                    </div>
+                </div>
+
+                </form>
+                <!-- <input type="button" class="btn btn-info" value="查詢" onclick="test()"> -->
+            </div>
+
+    </div>
+    </div>
+    </section>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="js/jquery.media.js"></script>
+<script asnyc src="js/watermark.js"></script>
+<script src="js/report.js"></script>
+<script src="js/url.js"></script>
+
+</html>
