@@ -162,7 +162,7 @@ function save(id){
         var Jsonarr={
         }
 
-        fetch(API_url + '/v1/api/houses/' + id + '/disable',{
+        fetch(API_url + '/v1/api/admins/houses/' + id + '/disable',{
             method: 'PUT', 
             body: JSON.stringify(Jsonarr), 
             headers: new Headers({
