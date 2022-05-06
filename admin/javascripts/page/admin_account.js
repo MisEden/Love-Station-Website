@@ -96,28 +96,28 @@ function loadData(){
     
                 if(currentPage - 1 >= 0){
                     var $li = $("<li class=\"page-item\"></li>");
-                    $("#pagination_admin").append($li.append("<a class=\"page-link\" href=\"partners.html?role="+ role + "&keyword="+ keyword + "&currentPage="+ (currentPage - 1) + "\">Previous</a>"));
+                    $("#pagination_admin").append($li.append("<a class=\"page-link\" href=\"admin_account.html?role="+ role + "&keyword="+ keyword + "&currentPage="+ (currentPage - 1) + "\">Previous</a>"));
                 }else{
                     var $li_disabled = $("<li class=\"page-item disabled\"></li>");
-                    $("#pagination_admin").append($li_disabled.append("<a class=\"page-link\" href=\"partners.html\">Previous</a>"));
+                    $("#pagination_admin").append($li_disabled.append("<a class=\"page-link\" href=\"admin_account.html\">Previous</a>"));
                 }
     
                 for(var i=0; i< totalPage; i++){
                     if(i == currentPage){
                         var $li_active = $("<li class=\"page-item active\"></li>");
-                        $("#pagination_admin").append($li_active.append("<a class=\"page-link\" href=\"partners.html?role="+ role + "&keyword="+ keyword + "&currentPage="+ (i) + "\">"+ (i + 1) + "</a>"));
+                        $("#pagination_admin").append($li_active.append("<a class=\"page-link\" href=\"admin_account.html?role="+ role + "&keyword="+ keyword + "&currentPage="+ (i) + "\">"+ (i + 1) + "</a>"));
                     }else{
                         var $li = $("<li class=\"page-item\"></li>");
-                        $("#pagination_admin").append($li.append("<a class=\"page-link\" href=\"partners.html?role="+ role + "&keyword="+ keyword + "&currentPage="+ (i) + "\">"+ (i + 1) + "</a>"));
+                        $("#pagination_admin").append($li.append("<a class=\"page-link\" href=\"admin_account.html?role="+ role + "&keyword="+ keyword + "&currentPage="+ (i) + "\">"+ (i + 1) + "</a>"));
                     }
                 }
     
                 if(currentPage + 1 < totalPage){
                     var $li = $("<li class=\"page-item\"></li>");
-                    $("#pagination_admin").append($li.append("<a class=\"page-link\" href=\"partners.html?role="+ role + "&keyword="+ keyword + "&currentPage="+ (currentPage + 1) + "\">Next</a>"));
+                    $("#pagination_admin").append($li.append("<a class=\"page-link\" href=\"admin_account.html?role="+ role + "&keyword="+ keyword + "&currentPage="+ (currentPage + 1) + "\">Next</a>"));
                 }else{
                     var $li_disabled = $("<li class=\"page-item disabled\"></li>");
-                    $("#pagination_admin").append($li_disabled.append("<a class=\"page-link\" href=\"partners.html\">Next</a>"));
+                    $("#pagination_admin").append($li_disabled.append("<a class=\"page-link\" href=\"admin_account.html\">Next</a>"));
                 }
         }else{
             var row = table.insertRow(0);
