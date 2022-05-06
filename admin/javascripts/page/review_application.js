@@ -24,6 +24,12 @@ var query_first = getParameterByName('first');
 var query_second = getParameterByName('second');
 var query_currentPage = getParameterByName('currentPage', where + defaultURL);
 
+try{
+    query_currentPage = parseInt(query_currentPage);
+}catch(error){
+
+}
+
 window.onload = function() {
     var path = ["首頁", "入住管理", "檢視入住申請單"];
     showBreadcrumb(path);
