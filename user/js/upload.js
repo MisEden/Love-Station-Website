@@ -5,9 +5,11 @@ window.onload = function () {
   var vars = temp[1].split("=");
   get_id = vars[1];
 
-  document.getElementById("file1").href = API_url + '/v1/api/storage/checkin-application';
+  //document.getElementById("file1").href = API_url + '/v1/api/storage/checkin-application';//入住契約書
+  document.getElementById("file1").href = 'https://drive.google.com/file/d/1qcrHJYZMBYt_cj_jnfeKe1VVwa9WBwDM/view?usp=sharing';//入住契約書改為google雲端硬碟檔案
   document.getElementById("file1").target = '_blank';
-  document.getElementById("file2").href = API_url + '/v1/api/storage/affidavit';
+  //document.getElementById("file2").href = API_url + '/v1/api/storage/affidavit';//切結書
+  document.getElementById("file2").href = 'https://drive.google.com/file/d/1F-lQxj1j-lT3xpZiBIl33Bxw8A0WIN4R/view?usp=sharing';//切結書改為google雲端硬碟檔案
   document.getElementById("file2").target = '_blank';
 
   const myFile = document.querySelector('#file-uploader1')
