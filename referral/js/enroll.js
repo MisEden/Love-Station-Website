@@ -322,10 +322,14 @@ function enroll() {
 
     const myFile = document.querySelector('#inputGroupFile01')
     const upload = myFile.files[0];
+    /*
+    //原本一定要上傳證明 現在不用
     if (upload == null) {
         check = 1;
         show_alert('請上傳證明');
-    } else if (document.getElementById("inputAddress").value == "") {
+    } else 
+    */
+    if (document.getElementById("inputAddress").value == "") {
         check = 1;
         show_alert('請填地址');
     } else {
