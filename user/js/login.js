@@ -44,7 +44,8 @@ function WebLogIn(){
           }
           else{
             // console.log(localStorage.getItem('token'))
-            window.location.href = 'check_in.html';
+            //window.location.href = 'check_in.html';//登入後會跳往入住程序
+			window.location.href = 'index.html';//改成登入後跳回首頁
           }
         }
         ,
