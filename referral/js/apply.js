@@ -1,7 +1,8 @@
 var roomId;
 window.onload = function() {
 
-    document.getElementById("disease").href = API_url + '/v1/api/storage/diseases-form';
+    //document.getElementById("disease").href = API_url + '/v1/api/storage/diseases-form';//原本的超連結對應可能是自己做的功能
+    document.getElementById("disease").href = 'https://www.cdc.gov.tw/Disease/Index';//改成對應衛服部網頁連結
     document.getElementById("disease").target = '_blank';
 
     Date.prototype.format = function(fmt) {
