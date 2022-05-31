@@ -332,7 +332,10 @@ function enroll() {
     if (document.getElementById("inputAddress").value == "") {
         check = 1;
         show_alert('請填地址');
-    } else {
+    } 
+    /*
+    //取消工作證號的驗證輸入
+    else {
 
         for (var value of formData.entries()) {
             if (value[1] == '' && value[0] != 'cellphone') {
@@ -342,6 +345,7 @@ function enroll() {
             }
         }
     }
+    */
     console.log(formData)
 
     if (check != 1) {
